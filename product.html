@@ -1,0 +1,2956 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="author" content="themesflat.com">
+    <title>An.Z Home Furnishings | Premium Custom Furniture & Decor</title>
+    <meta name="description" content="Premium custom sofas, curtains, flooring, wallpapers & home furnishings. 10+ years experience, 1000+ happy homes.">
+    <meta name="keywords" content="custom sofas, curtains, blinds, flooring, wallpapers, home furnishings Chennai">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.svg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ===== GRAND ELEGANT ECOMMERCE DESIGN ===== */
+        
+        :root {
+            --gold: #c19a6b;
+            --gold-light: #d4a373;
+            --gold-dark: #a0784c;
+            --dark: #1a1a1a;
+            --dark-light: #2a2a2a;
+            --cream: #faf7f2;
+            --cream-dark: #f0ebe4;
+            --text-dark: #2c2c2c;
+            --text-gray: #666;
+            --shadow-sm: 0 10px 30px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 40px rgba(0,0,0,0.08);
+            --shadow-lg: 0 30px 60px rgba(0,0,0,0.12);
+            --shadow-gold: 0 15px 35px rgba(193, 154, 107, 0.15);
+        }
+        
+        body {
+            background: #ffffff;
+        }
+        
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-header .section-tagline {
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding: 6px 20px;
+            background: linear-gradient(135deg, rgba(193,154,107,0.08) 0%, rgba(193,154,107,0.02) 100%);
+            border-radius: 50px;
+            border: 1px solid rgba(193,154,107,0.15);
+        }
+        
+        .section-header .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+        
+        .section-header .section-title span {
+            color: var(--gold);
+            position: relative;
+        }
+        
+        .section-header .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(193,154,107,0.15);
+            z-index: -1;
+        }
+        
+        .section-header .section-desc {
+            font-size: 17px;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* ===== HERO SLIDER SECTION ===== */
+        .product-hero-section {
+            padding: 40px 0 60px;
+            background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
+        }
+        
+        .hero-slider-container {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 40px;
+        }
+        
+        .hero-slide {
+            position: relative;
+            height: 550px;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .hero-slide-caption {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
+            z-index: 3;
+            color: #fff;
+        }
+        
+        .hero-slide-caption .badge {
+            background: var(--gold);
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+        }
+        
+        .hero-slide-caption h3 {
+          color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-thumbnails {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .hero-thumb {
+            width: 100px;
+            height: 70px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .hero-thumb.active,
+        .hero-thumb:hover {
+            opacity: 1;
+            border-color: var(--gold);
+        }
+        
+        .hero-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* ===== PRODUCT TITLE SECTION ===== */
+        .product-title-section {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+        
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--dark) 0%, #2d2d2d 100%);
+            color: var(--gold);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(193,154,107,0.3);
+        }
+        
+        .trust-badge i {
+            color: var(--gold);
+        }
+        
+        .product-main-title {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .product-tagline {
+            font-size: 20px;
+            color: var(--text-gray);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        /* ===== CATEGORY FILTER TABS ===== */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+        }
+        
+        .category-tab {
+            padding: 14px 32px;
+            background: #fff;
+            border: 1.5px solid #e8e2d8;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .category-tab i {
+            margin-right: 8px;
+            color: var(--gold);
+        }
+        
+        .category-tab:hover,
+        .category-tab.active {
+            background: var(--gold);
+            color: #fff;
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .category-tab:hover i,
+        .category-tab.active i {
+            color: #fff;
+        }
+        
+        /* ===== PRODUCT CARDS ===== */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card-elegant {
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
+        }
+        
+        .product-card-elegant:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(193,154,107,0.2);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            background: var(--gold);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .product-badge.bestseller {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .product-image {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .product-card-elegant:hover .product-image img {
+            transform: scale(1.08);
+        }
+        
+        .product-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .product-card-elegant:hover .product-image-overlay {
+            opacity: 1;
+        }
+        
+        .quick-view-btn {
+            background: #fff;
+            color: var(--dark);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-view-btn:hover {
+            background: var(--gold);
+            color: #fff;
+        }
+        
+        .product-content {
+            padding: 25px 20px;
+        }
+        
+        .product-category {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .product-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .product-price small {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-gray);
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+        
+        .feature-tag {
+            background: var(--cream);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn-enquiry {
+            flex: 1;
+            background: var(--dark);
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .btn-enquiry:hover {
+            background: var(--gold);
+            color: #fff;
+        }
+        
+        .btn-whatsapp {
+            width: 46px;
+            height: 46px;
+            background: #25D366;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        /* ===== CUSTOMIZATION SECTION ===== */
+        .customize-section {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+        
+        .customize-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .customize-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(193,154,107,0.1);
+        }
+        
+        .customize-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--gold);
+        }
+        
+        .customize-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 25px rgba(193,154,107,0.3);
+        }
+        
+        .customize-icon i {
+            font-size: 36px;
+            color: #fff;
+        }
+        
+        .customize-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+        
+        .customize-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* ===== MATERIALS SECTION ===== */
+        .materials-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .materials-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .materials-intro h3 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+        
+        .materials-intro p {
+            font-size: 17px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        .materials-block {
+            margin-bottom: 60px;
+        }
+        
+        .materials-block-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .materials-block-title i {
+            color: var(--gold);
+            font-size: 28px;
+        }
+        
+        .materials-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .materials-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .material-image-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .material-image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .material-image-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .material-image-card .caption {
+            padding: 15px;
+            background: #fff;
+            text-align: center;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .materials-list-elegant {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .materials-list-elegant li {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 20px 0;
+            border-bottom: 1px solid #e8e2d8;
+        }
+        
+        .materials-list-elegant li:last-child {
+            border-bottom: none;
+        }
+        
+        .material-check {
+            width: 40px;
+            height: 40px;
+            background: rgba(193,154,107,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 18px;
+        }
+        
+        .material-text {
+            flex: 1;
+        }
+        
+        .material-text h5 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .material-text p {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        /* ===== PROCESS SECTION ===== */
+        .process-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(193,154,107,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .process-section .section-header .section-title {
+            color: #fff;
+        }
+        
+        .process-section .section-header .section-desc {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .process-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 55px;
+            left: 80px;
+            right: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold) 0%, rgba(193,154,107,0.3) 50%, var(--gold) 100%);
+            z-index: 1;
+        }
+        
+        .process-step-elegant {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            max-width: 200px;
+        }
+        
+        .step-circle {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            box-shadow: 0 20px 40px rgba(193,154,107,0.3);
+            border: 3px solid rgba(255,255,255,0.2);
+        }
+        
+        .step-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+        }
+        
+        .step-icon {
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .process-step-elegant h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        
+        .process-step-elegant p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .why-choose-card-elegant {
+            text-align: center;
+            padding: 40px 25px;
+            background: var(--cream);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .why-choose-card-elegant:hover {
+            background: #fff;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .why-icon {
+            width: 90px;
+            height: 90px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .why-icon i {
+            font-size: 38px;
+            color: var(--gold);
+        }
+        
+        .why-choose-card-elegant h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+        
+        .why-choose-card-elegant p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 280px;
+            cursor: pointer;
+        }
+        
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+            height: 580px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-overlay p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* ===== STRONG CTA ===== */
+        .strong-cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strong-cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(193,154,107,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .strong-cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(193,154,107,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .cta-content-grand {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-badge-grand {
+            display: inline-block;
+            background: rgba(193,154,107,0.15);
+            color: var(--gold);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 600;
+            padding: 10px 30px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(193,154,107,0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-content-grand h2 {
+            font-size: 56px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .cta-content-grand h2 span {
+            color: var(--gold);
+        }
+        
+        .cta-content-grand p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 45px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons-grand {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-cta-grand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cta-primary {
+            background: var(--gold);
+            color: var(--dark);
+            box-shadow: 0 15px 35px rgba(193,154,107,0.3);
+        }
+        
+        .btn-cta-primary:hover {
+            background: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(193,154,107,0.4);
+        }
+        
+        .btn-cta-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .btn-cta-secondary:hover {
+            background: #fff;
+            color: var(--dark);
+            border-color: #fff;
+            transform: translateY(-5px);
+        }
+        
+        .btn-cta-whatsapp {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 15px 35px rgba(37,211,102,0.3);
+        }
+        
+        .btn-cta-whatsapp:hover {
+            background: #128C7E;
+            color: #fff;
+            transform: translateY(-5px);
+        }
+        
+        /* ===== PROMISE SECTION ===== */
+        .promise-section {
+            padding: 60px 0;
+            background: var(--cream);
+            text-align: center;
+        }
+        
+        .promise-quote {
+            font-size: 24px;
+            font-style: italic;
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .promise-quote i {
+            color: var(--gold);
+            margin: 0 10px;
+        }
+        
+        .trust-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* ===== CONTACT LIST ===== */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        
+        .contact-list i {
+            font-size: 16px;
+            color: var(--gold);
+            margin-top: 4px;
+            min-width: 20px;
+        }
+        
+        .contact-list span,
+        .contact-list a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .contact-list a:hover {
+            color: var(--gold);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .customize-grid,
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .process-timeline {
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+            }
+            
+            .process-timeline::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .section-header .section-title {
+                font-size: 34px;
+            }
+            
+            .product-main-title {
+                font-size: 42px;
+            }
+            
+            .hero-slide {
+                height: 400px;
+            }
+            
+            .materials-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-content-grand h2 {
+                font-size: 40px;
+            }
+            
+            .trust-stats {
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .section-header .section-title {
+                font-size: 28px;
+            }
+            
+            .product-main-title {
+                font-size: 32px;
+            }
+            
+            .product-tagline {
+                font-size: 16px;
+            }
+            
+            .hero-slide {
+                height: 300px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .customize-grid,
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item.large {
+                grid-column: span 1;
+                grid-row: span 1;
+                height: 280px;
+            }
+            
+            .category-tabs {
+                gap: 8px;
+            }
+            
+            .category-tab {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .cta-content-grand h2 {
+                font-size: 30px;
+            }
+            
+            .cta-content-grand p {
+                font-size: 16px;
+            }
+            
+            .btn-cta-grand {
+                padding: 14px 25px;
+                font-size: 14px;
+            }
+            
+            .trust-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-slide-caption {
+                left: 20px;
+                bottom: 20px;
+            }
+            
+            .hero-slide-caption h3 {
+                font-size: 20px;
+            }
+            
+            .process-step-elegant {
+                max-width: 100%;
+            }
+            
+            .step-circle {
+                width: 90px;
+                height: 90px;
+            }
+        }
+         <style>
+        
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary-dark);
+            color: #fff;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Header */
+      
+        .tf-container {
+            max-width: 1750px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        
+        @media (max-width: 767px) {
+          
+            .nav-icon-list {
+                width: 100%;
+            }
+            .nav-icon-list li {
+                width: 100%;
+            }
+            .nav-icon-list a {
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        }
+
+        .site-logo img {
+            max-height: 80px;
+            width: auto;
+        }
+
+        .main-menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 32px;
+        }
+
+        .main-menu ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-dark);
+            transition: color 0.2s;
+            padding: 8px 0;
+            display: inline-block;
+        }
+
+        .main-menu ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        .btn-contact {
+            background: var(--primary-gold);
+            color: #fff !important;
+            padding: 12px 28px !important;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn-contact:hover {
+            background: #a67c4e;
+            transform: translateY(-2px);
+        }
+ .materials-premium-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .materials-premium-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(193, 154, 107, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .container-custom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Section Header */
+        .materials-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .materials-badge {
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding: 6px 20px;
+            background: rgba(193, 154, 107, 0.08);
+            border-radius: 50px;
+            border: 1px solid rgba(193, 154, 107, 0.15);
+        }
+        
+        .materials-header h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+        
+        .materials-header h2 span {
+            color: var(--gold);
+            position: relative;
+        }
+        
+        .materials-header h2 span::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(193, 154, 107, 0.15);
+            z-index: -1;
+        }
+        
+        .materials-header .subtitle {
+            font-size: 20px;
+            color: var(--gold);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        /* Intro Text */
+        .materials-intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        
+        .materials-intro .lead {
+            font-size: 18px;
+            color: var(--text-gray);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+        
+        .experience-highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--dark) 0%, #2d2d2d 100%);
+            color: var(--gold);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            border: 1px solid rgba(193, 154, 107, 0.3);
+        }
+        
+        .experience-highlight i {
+            margin: 0 8px;
+            color: var(--gold);
+        }
+        
+        /* Materials Block */
+        .materials-block {
+            margin-bottom: 80px;
+        }
+        
+        .block-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .block-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(193, 154, 107, 0.3);
+        }
+        
+        .block-icon i {
+            font-size: 28px;
+            color: #fff;
+        }
+        
+        .block-header h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0;
+        }
+        
+        .block-header h3 span {
+            color: var(--gold);
+            font-weight: 300;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        
+        /* Materials Grid Layout */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .materials-grid.reverse {
+            grid-template-columns: 0.8fr 1.2fr;
+        }
+        
+        /* Fabric Gallery */
+        .fabric-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .fabric-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+        
+        .fabric-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .fabric-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .fabric-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .fabric-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: #fff;
+        }
+        
+        .fabric-overlay h5 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        
+        .fabric-overlay p {
+            font-size: 13px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .fabric-item.featured {
+            grid-column: span 2;
+            aspect-ratio: 2 / 1;
+        }
+        
+        /* Materials List */
+        .materials-list-premium {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .materials-list-premium li {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(193, 154, 107, 0.15);
+        }
+        
+        .materials-list-premium li:last-child {
+            border-bottom: none;
+        }
+        
+        .list-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(193, 154, 107, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 22px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .materials-list-premium li:hover .list-icon {
+            background: var(--gold);
+            color: #fff;
+            transform: scale(1.05);
+        }
+        
+        .list-content h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+        
+        .list-content p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .list-tagline {
+            margin-top: 20px;
+            padding: 18px 25px;
+            background: linear-gradient(135deg, rgba(193, 154, 107, 0.08) 0%, rgba(193, 154, 107, 0.02) 100%);
+            border-radius: 16px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .list-tagline p {
+            color: var(--text-dark);
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .list-tagline i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+        /* Structure Gallery */
+        .structure-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .structure-item {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s ease;
+        }
+        
+        .structure-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .structure-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .structure-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .structure-caption {
+            padding: 18px;
+            background: #fff;
+            text-align: center;
+        }
+        
+        .structure-caption h5 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .structure-caption p {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        /* Why Materials Stand Out */
+        .why-standout {
+            background: linear-gradient(135deg, #ffffff 0%, var(--cream) 100%);
+            border-radius: 30px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(193, 154, 107, 0.1);
+        }
+        
+        .why-standout h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--dark);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .why-standout h3 i {
+            color: var(--gold);
+            margin: 0 10px;
+        }
+        
+        .standout-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .standout-item {
+            text-align: center;
+            padding: 25px 20px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(193, 154, 107, 0.1);
+        }
+        
+        .standout-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--gold);
+        }
+        
+        .standout-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(193, 154, 107, 0.25);
+        }
+        
+        .standout-icon i {
+            font-size: 28px;
+            color: #fff;
+        }
+        
+        .standout-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .standout-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Our Promise */
+        .promise-section {
+            text-align: center;
+            padding: 50px 0;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .promise-section::before,
+        .promise-section::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .promise-section::before {
+            top: 0;
+        }
+        
+        .promise-section::after {
+            bottom: 0;
+        }
+        
+        .promise-icon {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+        
+        .promise-quote {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--dark);
+            max-width: 900px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        
+        .promise-quote i {
+            color: var(--gold);
+            margin: 0 15px;
+            font-size: 24px;
+            opacity: 0.7;
+        }
+        
+        .promise-author {
+            font-size: 16px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a1a1a 100%);
+            border-radius: 60px;
+            padding: 30px 50px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .trust-text {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .trust-text i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+        .trust-stats {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .trust-stat-item {
+            text-align: center;
+        }
+        
+        .trust-stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+        
+        .trust-stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .materials-grid,
+            .materials-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .standout-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .materials-header h2 {
+                font-size: 36px;
+            }
+            
+            .promise-quote {
+                font-size: 22px;
+            }
+            
+            .trust-bar {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            
+            .trust-stats {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .container-custom {
+                padding: 0 20px;
+            }
+            
+            .materials-header h2 {
+                font-size: 28px;
+            }
+            
+            .fabric-gallery,
+            .structure-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .fabric-item.featured {
+                grid-column: span 1;
+                aspect-ratio: 1;
+            }
+            
+            .standout-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-standout {
+                padding: 30px 20px;
+            }
+            
+            .block-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .block-header h3 {
+                font-size: 26px;
+            }
+            
+            .trust-text {
+                font-size: 18px;
+            }
+            
+            .trust-stats {
+                gap: 25px;
+            }
+            
+            .trust-stat-number {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .materials-list-premium li {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .list-icon {
+                margin-bottom: 10px;
+            }
+            
+            .promise-quote {
+                font-size: 18px;
+            }
+            
+            .trust-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+      .hero-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo on top-right of each slide */
+.hero-slide::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right corner */
+.product-image::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo top-right on gallery images */
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 45px;
+    height: 45px;
+    background: url("images/images/logo.png") no-repeat center;
+    background-size: contain;
+    z-index: 10;
+    pointer-events: none;
+}.gallery-overlay h5 {
+    color: #fff;
+}
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Scroll Top -->
+        <button id="goTop">
+            <span class="border-progress"></span>
+            <span class="icon icon-caret-up"></span>
+        </button>
+
+        <!-- Top Bar -->
+       
+        <div class="top-bar style-default d-flex align-items-center justify-content-center">
+          <div> AnZ Decor to Adore Home Furnishings provides premium home decor solutions
+
+            </div>
+        </div>
+
+        <!-- .header -->
+        <header class="header header-sticky">
+            <div class="tf-container w-1750">
+                <div class="header-inner">
+                    <a href="index.html" class="site-logo">
+<img src="images/images/logo.png " >                  </a>
+                    <nav class="main-menu">
+                        <ul class="navigation box-nav-menu">
+
+                            <li class="text-menu menu-item">
+                                <a href="index.html" class="item-link">Home</a>
+                            </li>
+                            <li class="text-menu menu-item">
+                                <a href="services.html" class="item-link">Services</a>
+                            </li>
+
+                            <li class="text-menu menu-item">
+                                <a href="product.html" class="item-link">Product</a>
+                            </li>
+
+
+                            <li class="text-menu menu-item">
+                                <a href="gallery.html" class="item-link">Gallery</a>
+                            </li>
+
+                            <li class="text-menu menu-item">
+                                <a href="contact.html" class="item-link">Contact</a>
+                            </li>
+
+
+
+
+                        </ul>
+                    </nav>
+                    <div class="header-right d-flex align-items-center gap_20">
+                        <ul class="nav-icon-list">
+                            <li>
+                                <a href="contact.html"
+                                    class="btn btn-dark text-warning px-5 py-3 fs-5 fw-bold rounded-3 nav-icon-item link">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Title -->
+        <div class="tf-page-title">
+            <h2 class="text-center text-uppercase title">Our Collection</h2>
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li>Products</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+<div class="product-title-section finished-products">
+    <div class="tf-container">
+
+        <div class="trust-badge">
+            <i class="fas fa-check-circle"></i> 100+ Projects Completed Successfully
+        </div>
+
+        <h1 class="product-main-title">Our Finished Products</h1>
+
+        <p class="product-tagline">
+            Explore our completed furniture & interior works crafted with precision and care.
+        </p>
+
+    </div>
+</div>
+            <!-- HERO SLIDER SECTION -->
+            <div class="product-hero-section">
+    <div class="tf-container w-1548">
+        <div class="hero-slider-container">
+
+            <div class="swiper hero-main-slider">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/images/product-banner-1.jpg" alt="Luxury Sofas">
+                            <div class="hero-slide-caption">
+                                <span class="badge">Bestseller</span>
+                                <h3>Luxury Custom Sofas</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/images/product-banner-3.jpg" alt="Designer Sofas">
+                            <div class="hero-slide-caption">
+                                <span class="badge">New Arrival</span>
+                                <h3>Modern Designer Sofas</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 (BED) -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/images/product-banner-2.jpg" alt="Luxury Bed">
+                            <div class="hero-slide-caption">
+                                <span class="badge">Premium</span>
+                                <h3>Elegant Bedroom Beds</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/images/product-banner-4.jpg" alt="Modern Sofas">
+                            <div class="hero-slide-caption">
+                                <span class="badge">Custom</span>
+                                <h3>Stylish Sofa Collection</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="hero-thumbnails">
+
+            <div class="hero-thumb active" data-slide="0">
+                <img src="images/images/product-banner-1.jpg" alt="Sofa 1">
+            </div>
+
+            <div class="hero-thumb" data-slide="1">
+                <img src="images/images/product-banner-3.jpg" alt="Sofa 2">
+            </div>
+
+            <div class="hero-thumb" data-slide="2">
+                <img src="images/images/product-banner-2.jpg" alt="Bed">
+            </div>
+
+            <div class="hero-thumb" data-slide="3">
+                <img src="images/images/product-banner-4.jpg" alt="Sofa 3">
+            </div>
+
+        </div>
+
+    </div>
+</div>  
+
+            <!-- PRODUCT TITLE + TAGLINE -->
+            <div class="product-title-section">
+                <div class="tf-container">
+                    <div class="trust-badge">
+                        <i class="fas fa-star"></i> Trusted since 2014 | 1000+ Happy Homes Served <i class="fas fa-star"></i>
+                    </div>
+                    <h1 class="product-main-title">Custom Furniture Manufacturing</h1>
+                    <p class="product-tagline">Designed for comfort. Crafted for your space.</p>
+                </div>
+            </div>
+
+            <!-- SHORT DESCRIPTION -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 40px; padding: 0 20px;">
+                <p style="font-size: 18px; color: #666; line-height: 1.8;">
+                    We create fully customized furniture using premium materials, tailored to your design, comfort, and space requirements.
+                </p>
+            </div>
+
+            <!-- CATEGORY FILTER TABS -->
+            <div class="tf-container w-1548">
+    <div class="category-tabs" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center;">
+        <div class="category-tab active" data-category="all" style="padding: 10px 20px; background: #1a1a1a; color: white; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-th-large"></i> All Products</div>
+        <div class="category-tab" data-category="curtains" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-window-maximize"></i> Curtains</div>
+        <div class="category-tab" data-category="blinds" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-blinds"></i> Blinds</div>
+        <div class="category-tab" data-category="sofas" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-couch"></i> Sofas & Furniture</div>
+        <div class="category-tab" data-category="beds" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-bed"></i> Beds & Headboard</div>
+        <div class="category-tab" data-category="flooring" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-border-all"></i> Flooring</div>
+        <div class="category-tab" data-category="wallpapers" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-paint-brush"></i> Wallpapers</div>
+    </div>
+</div>
+
+<!-- PRODUCT IMAGE GRID (4 per row) -->
+<div class="tf-container w-1548" style="padding: 0 0 60px;">
+    <div class="product-grid" id="productGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        
+        <!-- Curtains -->
+        <div class="product-card-elegant" data-category="curtains">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-1.jpg')">
+                <img src="images/images/curtain-1.jpg" alt="Blackout Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="curtains">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-2.jpg')">
+                <img src="images/images/curtain-2.jpg" alt="Sheer Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="curtains">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-3.jpg')">
+                <img src="images/images/curtain-3.jpg" alt="Designer Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="curtains">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-4.jpg')">
+                <img src="images/images/curtain-4.jpg" alt="Printed Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="curtains">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-5.jpg')">
+                <img src="images/images/curtain-5.jpg" alt="Eyelet Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="curtains">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-6.jpg')">
+                <img src="images/images/curtain-6.jpg" alt="Motorized Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+        <!-- Blinds -->
+        <div class="product-card-elegant" data-category="blinds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-1.jpg')">
+                <img src="images/images/blind-1.jpg" alt="Roller Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="blinds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-2.jpg')">
+                <img src="images/images/blind-2.jpg" alt="Roman Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="blinds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-3.jpg')">
+                <img src="images/images/blind-3.jpg" alt="Zebra Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="blinds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-4.jpg')">
+                <img src="images/images/blind-4.jpg" alt="Vertical Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="blinds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-5.jpg')">
+                <img src="images/images/blind-5.jpg" alt="Wooden Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="blinds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-3a.jpg')">
+                <img src="images/images/blind-3a.jpg" alt="Motorized Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+        <!-- Sofas -->
+        <div class="product-card-elegant" data-category="sofas">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-1.jpg')">
+                <img src="images/images/sofa-1.jpg" alt="Luxury Sofa Set" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="sofas">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-2.jpg')">
+                <img src="images/images/sofa-2.jpg" alt="Elegant 3-Seater" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="sofas">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-4.jpg')">
+                <img src="images/images/sofa-4.jpg" alt="Premium Sectional" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="sofas">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-5.jpg')">
+                <img src="images/images/sofa-5.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="sofas">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-3.jpg')">
+                <img src="images/images/sofa-3.jpg" alt="Luxury Custom Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+        <!-- Beds -->
+        <div class="product-card-elegant" data-category="beds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-1.jpg')">
+                <img src="images/images/bed-1.jpg" alt="Royal Storage Bed" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="beds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-2.jpg')">
+                <img src="images/images/bed-2.jpg" alt="King Size Bed Frame" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="beds">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-3.jpg')">
+                <img src="images/images/bed-3.jpg" alt="Designer Upholstered Bed" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+        <!-- Flooring -->
+        <div class="product-card-elegant" data-category="flooring">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/flooring-1.jpg')">
+                <img src="images/images/flooring-1.jpg" alt="Vinyl Flooring" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="flooring">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/flooring.jpg')">
+                <img src="images/images/flooring.jpg" alt="Luxury Flooring" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+        <!-- Wallpapers -->
+        <div class="product-card-elegant" data-category="wallpapers">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-1.jpg')">
+                <img src="images/images/wallpaper-1.jpg" alt="Floral Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="wallpapers">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-2.jpg')">
+                <img src="images/images/wallpaper-2.jpg" alt="Geometric Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+        <div class="product-card-elegant" data-category="wallpapers">
+            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-3.jpg')">
+                <img src="images/images/wallpaper-3.jpg" alt="Textured Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightboxOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 10000; align-items: center; justify-content: center;" onclick="closeLightbox()">
+    <span style="position: absolute; top: 25px; right: 40px; font-size: 45px; color: white; cursor: pointer; z-index: 10001;" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImage" src="" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.8); object-fit: contain;" alt="lightbox view">
+</div>
+
+
+            <!-- MATERIALS WE USE SECTION -->
+            <div class="materials-section">
+                <div class="tf-container w-1462">
+                    <div class="section-header">
+                        <span class="section-tagline">Quality First</span>
+                        <h2 class="section-title">Materials We <span>Use</span></h2>
+                        <p class="section-desc">Crafted with quality. Designed to last.</p>
+                    </div>
+                    
+                    <div class="materials-intro">
+                        <h3>✨ Decor to Adore</h3>
+                        <p>At AnZ Home Furnishings, we believe that true luxury begins with the right materials. Since 2014, we have been delivering premium home furnishing solutions with a strong focus on durability, comfort, and refined finishes.</p>
+                    </div>
+                    
+                    <!-- Premium Upholstery -->
+                    <div class="materials-block">
+                        <div class="materials-block-title">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Premium Fabric Collections</span>
+                        </div>
+                        <div class="materials-showcase">
+                            <div class="materials-images">
+                                <div class="material-image-card">
+                                    <img src="images/img/luxury-fabrics.avif" alt="Premium Fabric">
+                                    <div class="caption">Luxury Fabrics</div>
+                                </div>
+                                <div class="material-image-card">
+                                    <img src="images/img/Genuine Leather.webp" alt="Leather Options">
+                                    <div class="caption">Genuine Leather</div>
+                                </div>
+                                <div class="material-image-card">
+                                    <img src="images/img/banner.jpg" alt="Curtain Fabrics">
+                                    <div class="caption">Designer Curtain Fabrics</div>
+                                </div>
+                                <div class="material-image-card">
+                                    <img src="images/img/Custom Colors & Textures.avif" alt="Color Options">
+                                    <div class="caption">Custom Colors & Textures</div>
+                                </div>
+                            </div>
+                            <div class="materials-content-text">
+                                <ul class="materials-list-elegant">
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>Premium Fabric Collections</h5>
+                                            <p>Wide selection of high-quality, stain-resistant fabrics</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>Genuine Leather & Leatherette</h5>
+                                            <p>Premium leather options for luxurious feel and durability</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>Designer Curtain Fabrics</h5>
+                                            <p>Exclusive collection of designer fabrics for curtains</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>Custom Color & Texture Options</h5>
+                                            <p>Choose from a wide range to perfectly match your interiors</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Strong Inner Structure -->
+                    <div class="materials-block">
+                        <div class="materials-block-title">
+                            <i class="fas fa-cubes"></i>
+                            <span>Strong Inner Structure</span>
+                        </div>
+                        <div class="materials-showcase">
+                            <div class="materials-images">
+                                <div class="material-image-card">
+                                    <img src="images/images/wood.webp" alt="Wooden Frame">
+                                    <div class="caption">Premium Wooden Frame</div>
+                                </div>
+                                <div class="material-image-card">
+                                    <img src="images/images/high-density-foam.avif" alt="High Density Foam">
+                                    <div class="caption">High-Density Foam</div>
+                                </div>
+                            </div>
+                            <div class="materials-content-text">
+                                <ul class="materials-list-elegant">
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>High-quality wooden frames</h5>
+                                            <p>Kiln-dried hardwood for superior strength and longevity</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>High-density foam</h5>
+                                            <p>Premium foam that maintains shape and provides lasting comfort</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>Durable internal support structures</h5>
+                                            <p>Engineered for maximum stability and weight distribution</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="material-check"><i class="fas fa-check"></i></span>
+                                        <div class="material-text">
+                                            <h5>Precision craftsmanship in every detail</h5>
+                                            <p>Expert stitching and finishing for flawless results</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Why Materials Stand Out -->
+                    <div style="background: linear-gradient(135deg, var(--cream) 0%, #fff 100%); border-radius: 24px; padding: 40px; margin-top: 40px;">
+                        <h3 style="font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 30px; text-align: center;">💎 Why Our Materials Stand Out</h3>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px;">
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                    <i class="fas fa-gem" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Carefully Sourced Premium Materials</h4>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                    <i class="fas fa-shield-alt" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Designed for Long-Term Durability</h4>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                    <i class="fas fa-heart" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Comfort-Focused Construction</h4>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                                    <i class="fas fa-sparkles" style="color: #fff; font-size: 24px;"></i>
+                                </div>
+                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Elegant and Modern Finishes</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROCESS SECTION -->
+            <div class="process-section">
+                <div class="tf-container w-1462">
+                    <div class="section-header">
+                        <span class="section-tagline" style="color: var(--gold);">How It Works</span>
+                        <h2 class="section-title" style="color: #fff;">Our Simple <span>Process</span></h2>
+                        <p class="section-desc" style="color: rgba(255,255,255,0.7);">A seamless journey from concept to completion</p>
+                    </div>
+                    
+                    <div class="process-timeline">
+                        <div class="process-step-elegant">
+                            <div class="step-circle">
+                                <span class="step-number">1</span>
+                                <i class="step-icon fas fa-comments"></i>
+                            </div>
+                            <h4>Share Requirement</h4>
+                            <p>Tell us your vision, style preferences, and specific needs</p>
+                        </div>
+                        
+                        <div class="process-step-elegant">
+                            <div class="step-circle">
+                                <span class="step-number">2</span>
+                                <i class="step-icon fas fa-store"></i>
+                            </div>
+                            <h4>Visit Showroom</h4>
+                            <p>Explore materials, fabrics, and designs at our Chennai showroom</p>
+                        </div>
+                        
+                        <div class="process-step-elegant">
+                            <div class="step-circle">
+                                <span class="step-number">3</span>
+                                <i class="step-icon fas fa-ruler"></i>
+                            </div>
+                            <h4>Measurement & Quote</h4>
+                            <p>Precise on-site measurements and transparent quotation</p>
+                        </div>
+                        
+                        <div class="process-step-elegant">
+                            <div class="step-circle">
+                                <span class="step-number">4</span>
+                                <i class="step-icon fas fa-tools"></i>
+                            </div>
+                            <h4>Manufacturing</h4>
+                            <p>Expert craftsmanship at our in-house manufacturing unit</p>
+                        </div>
+                        
+                        <div class="process-step-elegant">
+                            <div class="step-circle">
+                                <span class="step-number">5</span>
+                                <i class="step-icon fas fa-truck"></i>
+                            </div>
+                            <h4>Delivery & Installation</h4>
+                            <p>Professional delivery and seamless installation at your location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OUR WORK GALLERY -->
+     
+
+            <!-- WHY CHOOSE US -->
+            <div class="why-choose-section">
+                <div class="tf-container w-1462">
+                    <div class="section-header">
+                        <span class="section-tagline">Why Choose AnZ</span>
+                        <h2 class="section-title">Excellence in Every <span>Detail</span></h2>
+                        <p class="section-desc">Experience the difference with our premium quality and dedicated service</p>
+                    </div>
+                    
+                    <div class="why-choose-grid">
+                        <div class="why-choose-card-elegant">
+                            <div class="why-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h4>Own Manufacturing Unit</h4>
+                            <p>Direct quality control and competitive pricing with in-house production</p>
+                        </div>
+                        
+                        <div class="why-choose-card-elegant">
+                            <div class="why-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h4>Premium Materials</h4>
+                            <p>We source only the finest fabrics, woods, and materials</p>
+                        </div>
+                        
+                        <div class="why-choose-card-elegant">
+                            <div class="why-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4>10+ Years Experience</h4>
+                            <p>Decade of expertise in delivering exceptional home furnishing solutions</p>
+                        </div>
+                        
+                        <div class="why-choose-card-elegant">
+                            <div class="why-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h4>End-to-End Service</h4>
+                            <p>From design consultation to installation — we handle everything</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROMISE SECTION -->
+            <div class="promise-section" style="background: #f9f9f9; padding: 60px 0; text-align: center;">
+    <div class="tf-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="promise-quote" style="font-size: 18px; color: #555; font-style: italic; margin-bottom: 50px; line-height: 1.8; position: relative; display: inline-block; max-width: 700px;">
+            <i class="fas fa-quote-left" style="color: #c49b6c; font-size: 24px; margin-right: 8px; vertical-align: top;"></i>
+            From material selection to final installation, we ensure every detail reflects quality, comfort, and craftsmanship.
+            <i class="fas fa-quote-right" style="color: #c49b6c; font-size: 24px; margin-left: 8px; vertical-align: bottom;"></i>
+        </div>
+        
+        <div class="trust-stats" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
+            <div class="stat-item" style="text-align: center;">
+                <div class="stat-number" data-target="10" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
+                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Years of Excellence</div>
+            </div>
+            <div class="stat-item" style="text-align: center;">
+                <div class="stat-number" data-target="1000" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
+                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Happy Homes Served</div>
+            </div>
+            <div class="stat-item" style="text-align: center;">
+                <div class="stat-number" data-target="100" data-suffix="%" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0%</div>
+                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Customer Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COUNTER ANIMATION SCRIPT -->
+<script>
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 50; // Lower = faster animation
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const suffix = counter.getAttribute('data-suffix') || '';
+            let count = 0;
+            
+            const increment = target / speed;
+            
+            const updateCount = () => {
+                if (count < target) {
+                    count += increment;
+                    counter.innerText = Math.ceil(count) + suffix;
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target + suffix;
+                }
+            };
+            
+            updateCount();
+        });
+    }
+
+    // Trigger counter animation when section scrolls into view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.trust-stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+</script>
+
+<!-- Font Awesome (if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+            <!-- STRONG CTA -->
+            <div class="strong-cta-section">
+                <div class="tf-container">
+                    <div class="cta-content-grand">
+                        <span class="cta-badge-grand">Don't Miss Out</span>
+                        <h2>Transform Your <span>Space Today</span></h2>
+                        <p>Get expert consultation and premium customization for your dream interiors. Limited slots available this month!</p>
+                        
+                        <div class="cta-buttons-grand">
+                            <a href="contact.html" class="btn-cta-grand btn-cta-primary">
+                                <i class="fas fa-calendar-check"></i>
+                                Get Free Consultation
+                            </a>
+                            <a href="https://wa.me/917401130586" class="btn-cta-grand btn-cta-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp Now
+                            </a>
+                            <a href="contact.html#map" class="btn-cta-grand btn-cta-secondary">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Visit Showroom
+                            </a>
+                        </div>
+                        
+                        <div style="margin-top: 50px; color: rgba(255,255,255,0.6); font-size: 14px;">
+                            <i class="fas fa-phone"></i> +91 74011 30586 &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="fas fa-envelope"></i>                                         <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a>
+ &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="fas fa-map-marker-alt"></i> 610, M.K.N Road, Alandur, Chennai
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /main-content -->
+
+        <!-- Footer -->
+       <footer class="footer">
+    <div class="footer-body">
+        <div class="tf-container">
+            <div class="row">
+
+                <!-- About -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-about">
+                        <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
+                        <p class="text-body-default text_white mb_24">
+                            An.Z Home Furnishings provides premium home decor solutions including curtains,
+                            wallpapers, customized sofas, blinds, and flooring to enhance your living space.
+                        </p>
+                        <a href="services.html"
+                            class="hover-underline-link text_white text-body-default text-uppercase">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products + Links -->
+                <div class="col-lg-5 col-md-6 col-12">
+                    <div class="wrap-footer-col-block">
+
+                        <!-- Products -->
+                        <div class="footer-col-block">
+                            <div class="h5 footer-title text_white mb_24">Products</div>
+                            <ul class="footer-menu-list d-grid gap_12">
+                                <li><a href="#" class="link-2 text_white">Curtains</a></li>
+                                <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
+                                <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
+                                <li><a href="#" class="link-2 text_white">Blinds</a></li>
+                                <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- More Products -->
+                        <div class="footer-col-block">
+                            <div class="h5 footer-title text_white mb_24">More Products</div>
+                            <ul class="footer-menu-list d-grid gap_12">
+                                <li><a href="#" class="link-2 text_white">Mattress</a></li>
+                                <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
+                                <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
+                                <li><a href="#" class="link-2 text_white">Carpets</a></li>
+                                <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Contact + Newsletter -->
+                <div class="col-lg-4 col-md-6 col-12">
+                   <div class="footer-newsletter">
+
+    <div class="footer-title text_white mb_28">
+        <div class="h5 text-uppercase mb_16 text_white">Contact Us</div>
+
+        <ul class="contact-list">
+            <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>610, M.K.N Road, Alandur, Chennai - 600016</span>
+            </li>
+            <li>
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:7401130586">+91 7401130586</a>
+            </li>
+            <li>
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:9710854799">+91 7358560491</a>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <div class="tf-container">
+            <div class="wrap-footer-bottom">
+
+                <p class="text_white">
+                    Copyright © <span id="year"></span> 
+                    An.Z Home Furnishings. All Rights Reserved. 
+                    Developed By 
+                    <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">
+                        Chennai Leads
+                    </a>.
+                </p>
+
+                <!-- Payments -->
+                
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- Toolbar -->
+    <div class="tf-toolbar-bottom">
+        <div class="toolbar-item"><a href="services.html"><span class="toolbar-icon"><i class="icon icon-support"></i></span><span class="toolbar-label">Services</span></a></div>
+        <div class="toolbar-item"><a href="product.html"><span class="toolbar-icon"><i class="icon icon-storefront"></i></span><span class="toolbar-label">Shop</span></a></div>
+        <div class="toolbar-item"><a href="index.html"><span class="toolbar-icon"><i class="icon icon-user"></i></span><span class="toolbar-label">Home</span></a></div>
+        <div class="toolbar-item"><a href="gallery.html"><span class="toolbar-icon"><i class="icon icon-heart"></i></span><span class="toolbar-label">Gallery</span></a></div>
+        <div class="toolbar-item"><a href="contact.html"><span class="toolbar-icon"><i class="icon icon-bag"></i></span><span class="toolbar-label">Contact</span></a></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+        <span class="icon-close-popup" data-bs-dismiss="offcanvas"><i class="icon-close"></i></span>
+        <div class="canvas-header"><a href="index.html" class="site-logo"><img src="images/images/logo.png " >    </a></div>
+        <div class="canvas-body"><div class="mb-content-top"><ul class="nav-ul-mb" id="wrapper-menu-navigation"></ul></div></div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/count-down.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Year
+        document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+        
+        // Hero Slider
+        var heroSwiper = new Swiper('.hero-main-slider', {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            // navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+        
+        // Thumbnail click
+        document.querySelectorAll('.hero-thumb').forEach((thumb, index) => {
+            thumb.addEventListener('click', function() {
+                heroSwiper.slideTo(index);
+                document.querySelectorAll('.hero-thumb').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        heroSwiper.on('slideChange', function() {
+            document.querySelectorAll('.hero-thumb').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === heroSwiper.realIndex);
+            });
+        });
+        
+        // Category Filter
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                document.querySelectorAll('.product-card-elegant').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+    // Lightbox functions
+    function openLightbox(imageSrc) {
+        document.getElementById('lightboxImage').src = imageSrc;
+        document.getElementById('lightboxOverlay').style.display = 'flex';
+    }
+    function closeLightbox() {
+        document.getElementById('lightboxOverlay').style.display = 'none';
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Category filter
+    const tabs = document.querySelectorAll('.category-tab');
+    const cards = document.querySelectorAll('.product-card-elegant');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            
+            // Update active tab style
+            tabs.forEach(t => {
+                t.style.background = '#f0f0f0';
+                t.style.color = '#333';
+                t.classList.remove('active');
+            });
+            this.style.background = '#1a1a1a';
+            this.style.color = 'white';
+            this.classList.add('active');
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+<!-- Font Awesome (required for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>

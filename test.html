@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="themesflat.com">
+    <title>An.Z Home Furnishings - Premium Home Decor Services</title>
+    <meta name="description"
+        content="VinFur offers modern, durable furniture from Vietnam — stylish sofas, dining sets, storage, and decor at fair prices with fast delivery.">
+    <meta name="keywords"
+        content="VinFur, furniture, modern furniture, home decor, sofas, dining sets, storage solutions, affordable furniture, stylish interiors">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/sib-styles.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.svg">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        /* ===== GLOBAL ENHANCEMENTS ===== */
+        body {
+            background: #faf7f2;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 12px 0;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #fff;
+            font-weight: 400;
+        }
+        
+        /* ===== HEADER ENHANCEMENT ===== */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            padding: 8px 0;
+        }
+        
+        .site-logo img {
+            max-height: 65px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .site-logo:hover img {
+            transform: scale(1.05);
+        }
+        
+        .navigation .item-link {
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 15px;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+        
+        .navigation .item-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #c19a6b;
+            transition: width 0.3s ease;
+        }
+        
+        .navigation .item-link:hover {
+            color: #c19a6b;
+        }
+        
+        .navigation .item-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-dark {
+            background: #1a1a1a;
+            border: 2px solid #1a1a1a;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 12px 28px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-dark:hover {
+            background: #c19a6b;
+            border-color: #c19a6b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(193, 154, 107, 0.3);
+        }
+        
+        /* ===== PAGE TITLE WITH BACKGROUND IMAGE ===== */
+        .tf-page-title {
+            position: relative;
+            padding: 80px 0;
+            background: url('images/images/curtain-banner.jpg') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Dark overlay */
+        .tf-page-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.7) 100%);
+            z-index: 1;
+        }
+        
+        /* Subtle pattern overlay */
+        .tf-page-title::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(193, 154, 107, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(193, 154, 107, 0.08) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .tf-page-title .title {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .breadcrumb-list {
+            position: relative;
+            z-index: 2;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .breadcrumb-list li {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .breadcrumb-list a {
+            color: #c19a6b;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-list a:hover {
+            color: #fff;
+        }
+        
+        .breadcrumb-list li:not(:last-child)::after {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .featured-services-premium {
+            padding: 60px 0;
+            background: linear-gradient(180deg, #faf7f2 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-services-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(193, 154, 107, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .featured-services-premium::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(193, 154, 107, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .section-header-premium {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #c19a6b;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding: 8px 24px;
+            background: linear-gradient(135deg, rgba(193, 154, 107, 0.1) 0%, rgba(193, 154, 107, 0.03) 100%);
+            border-radius: 50px;
+            border: 1px solid rgba(193, 154, 107, 0.2);
+        }
+        
+        .section-header-premium h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        
+        .section-header-premium h2 span {
+            color: #c19a6b;
+            position: relative;
+        }
+        
+        .section-header-premium h2 span::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(193, 154, 107, 0.15);
+            z-index: -1;
+        }
+        
+        .section-header-premium p {
+            font-size: 16px;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .services-premium-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(193, 154, 107, 0.1);
+        }
+        
+        .service-row:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(193, 154, 107, 0.12);
+            border-color: rgba(193, 154, 107, 0.25);
+        }
+        
+        .service-image-box {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            min-height: 280px;
+            max-height: 320px;
+        }
+        
+        .service-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .service-image-box::after {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 35px;
+            height: 35px;
+            background: url("images/images/logo.png") no-repeat center;
+            background-size: contain;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0.85;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.7;
+            width: 8px;
+            height: 8px;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: #c19a6b;
+            opacity: 1;
+        }
+        
+        .service-content-box {
+            padding: 25px 35px 25px 25px;
+        }
+        
+        .service-icon-large {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #c19a6b 0%, #a0784c 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(193, 154, 107, 0.25);
+            color: #fff;
+            font-size: 24px;
+        }
+        
+        .service-content-box h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .service-tagline-large {
+            font-size: 15px;
+            color: #c19a6b;
+            font-weight: 500;
+            margin-bottom: 15px;
+            letter-spacing: 0.3px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(193, 154, 107, 0.15);
+        }
+        
+        .service-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .feature-list-premium {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 15px;
+        }
+        
+        .feature-list-premium li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+            color: #444;
+            line-height: 1.5;
+        }
+        
+        .feature-list-premium li i {
+            color: #c19a6b;
+            font-size: 14px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .service-cta-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: #1a1a1a;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .service-cta-large:hover {
+            background: #c19a6b;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(193, 154, 107, 0.3);
+        }
+        
+        .cta-text {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #c19a6b;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        /* ===== CUSTOMER SERVICES ===== */
+        .s-customer-services {
+            padding: 40px 0;
+            background: #fff;
+        }
+        
+        .box-icon_v01 {
+            background: #faf7f2;
+            padding: 25px 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(193, 154, 107, 0.1);
+        }
+        
+        .box-icon_v01:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(193, 154, 107, 0.15);
+            border-color: rgba(193, 154, 107, 0.3);
+        }
+        
+        .box-icon_v01 .icon {
+            font-size: 32px;
+            color: #c19a6b;
+            margin-bottom: 12px;
+        }
+        
+        .box-icon_v01 .h5 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+        
+        .box-icon_v01 p {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+        
+        /* ===== FOOTER ENHANCEMENT ===== */
+        .footer {
+            background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(193, 154, 107, 0.3), transparent);
+        }
+        
+        .footer-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #c19a6b;
+        }
+        
+        .footer-menu-list li a {
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 0;
+        }
+        
+        .footer-menu-list li a:hover {
+            color: #c19a6b !important;
+            padding-left: 8px;
+        }
+        
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-list li:hover {
+            transform: translateX(5px);
+        }
+        
+        .contact-list i {
+            font-size: 16px;
+            color: #c19a6b;
+            margin-top: 4px;
+            min-width: 20px;
+        }
+        
+        .contact-list span,
+        .contact-list a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-list a:hover {
+            color: #c19a6b;
+        }
+        
+        .hover-underline-link {
+            position: relative;
+            text-decoration: none;
+        }
+        
+        .hover-underline-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #c19a6b;
+            transition: width 0.3s ease;
+        }
+        
+        .hover-underline-link:hover::after {
+            width: 100%;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer-bottom a {
+            color: #c19a6b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-bottom a:hover {
+            color: #fff;
+        }
+        
+        /* ===== SCROLL TOP ===== */
+        #goTop {
+            background: #c19a6b;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 4px 15px rgba(193, 154, 107, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        #goTop:hover {
+            background: #1a1a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* ===== MOBILE TOOLBAR ===== */
+        .tf-toolbar-bottom {
+            background: #fff;
+            box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.08);
+            padding: 8px 0;
+        }
+        
+        .toolbar-item a {
+            color: #666;
+            transition: all 0.3s ease;
+        }
+        
+        .toolbar-item a:hover,
+        .toolbar-item.active a {
+            color: #c19a6b;
+        }
+        
+        .toolbar-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        
+        .toolbar-label {
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        /* ===== GALLERY & IMAGE ENHANCEMENT ===== */
+        .img-style {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .img-style img {
+            transition: transform 0.5s ease;
+        }
+        
+        .img-style:hover img {
+            transform: scale(1.06);
+        }
+        
+        .img-style::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: url("images/images/logo.png") no-repeat center;
+            background-size: contain;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .service-content-box {
+                padding: 20px 25px;
+            }
+            
+            .feature-list-premium {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header-premium h2 {
+                font-size: 32px;
+            }
+            
+            .service-image-box {
+                min-height: 250px;
+                max-height: 280px;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .service-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .service-image-box {
+                min-height: 220px;
+                max-height: 250px;
+            }
+            
+            .service-content-box {
+                padding: 25px 20px;
+            }
+            
+            .service-content-box h3 {
+                font-size: 20px;
+            }
+            
+            .section-header-premium h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .featured-services-premium {
+                padding: 40px 0;
+            }
+            
+            .section-header-premium h2 {
+                font-size: 24px;
+            }
+            
+            .service-image-box {
+                min-height: 200px;
+                max-height: 220px;
+            }
+            
+            .service-icon-large {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+            
+            .tf-page-title .title {
+                font-size: 28px;
+            }
+            
+            .tf-page-title {
+                padding: 50px 0;
+            }
+            
+            .box-icon_v01 {
+                padding: 18px 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-header-premium h2 {
+                font-size: 20px;
+            }
+            
+            .service-content-box {
+                padding: 18px 15px;
+            }
+            
+            .service-content-box h3 {
+                font-size: 18px;
+            }
+            
+            .feature-list-premium {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-image-box {
+                min-height: 180px;
+                max-height: 200px;
+            }
+            
+            .tf-page-title {
+                padding: 40px 0;
+            }
+            
+            .tf-page-title .title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- Scroll Top -->
+        <button id="goTop">
+            <span class="border-progress"></span>
+            <span class="icon icon-caret-up"></span>
+        </button>
+
+        <!-- Top Bar -->
+        <div class="top-bar style-default d-flex align-items-center justify-content-center">
+            <div>AnZ Decore to Adore Home Furnishings provides premium home decor solutions</div>
+        </div>
+
+        <!-- Header -->
+        <header class="header header-sticky">
+            <div class="tf-container w-1750">
+                <div class="header-inner">
+                    <a href="index.html" class="site-logo">
+                        <img src="images/images/logo.png" alt="An.Z Home Furnishings">
+                    </a>
+                    <nav class="main-menu">
+                        <ul class="navigation box-nav-menu">
+                            <li class="text-menu menu-item">
+                                <a href="index.html" class="item-link">Home</a>
+                            </li>
+                            <li class="text-menu menu-item">
+                                <a href="services.html" class="item-link">Services</a>
+                            </li>
+                            <li class="text-menu menu-item">
+                                <a href="product.html" class="item-link">Product</a>
+                            </li>
+                            <li class="text-menu menu-item">
+                                <a href="gallery.html" class="item-link">Gallery</a>
+                            </li>
+                            <li class="text-menu menu-item">
+                                <a href="contact.html" class="item-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-right d-flex align-items-center gap_20">
+                        <ul class="nav-icon-list">
+                            <li>
+                                <a href="contact.html"
+                                    class="btn btn-dark text-warning px-4 py-2 fs-6 fw-bold rounded-3 nav-icon-item link">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Title with Background Image -->
+        <div class="tf-page-title">
+            <h2 class="text-center text-uppercase title">Our Projects</h2>
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li>Projects</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Hakkoido Japanese Restaurant -->
+            <section class="featured-services-premium">
+                <div class="tf-container">
+                    
+                    <div class="section-header-premium wow fadeInUp">
+                        <span class="section-badge">Our Signature Project</span>
+                        <h2>Hakkoido Japanese Restaurant <span>Bangalore</span></h2>
+                        <p>Crafting authentic Japanese-inspired interiors with precision, elegance, and complete turnkey execution</p>
+                    </div>
+                    
+                    <div class="services-premium-grid">
+                        <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-image-box">
+                                <div class="swiper mySlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="images/hakoida/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/hakoida/5.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/hakoida/3.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/hakoida/7.jpg" onerror="this.src='https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg'">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/hakoida/8.jpg" onerror="this.src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+
+                            <div class="service-content-box">
+                                <div class="service-icon-large">
+                                    <i class="fas fa-torii-gate"></i>
+                                </div>
+                                <h3>Themed Interior Furnishing</h3>
+                                <div class="service-tagline-large">Inspired by Tradition, Designed for Experience</div>
+                                <p class="service-description">
+                                    For Hakkoido Japanese Restaurant, we delivered a complete interior furnishing solution inspired by traditional Japanese aesthetics. Every detail was thoughtfully designed to reflect cultural authenticity while maintaining modern functionality.
+                                </p>
+                                <ul class="feature-list-premium">
+                                    <li><i class="fas fa-check-circle"></i> Custom-designed Japanese-themed blinds & curtains</li>
+                                    <li><i class="fas fa-check-circle"></i> Concept-based flooring aligned with interior theme</li>
+                                    <li><i class="fas fa-check-circle"></i> Tailor-made tables and seating solutions</li>
+                                    <li><i class="fas fa-check-circle"></i> End-to-end execution from design to installation</li>
+                                </ul>
+                                <div class="cta-text">
+                                    <i class="fas fa-star"></i> Executed seamlessly by AnZ Home Furnishings with precision and craftsmanship.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Other Projects -->
+            <section class="featured-services-premium">
+                <div class="tf-container">
+
+                    <!-- Myeongga Chennai -->
+                    <div class="section-header-premium">
+                        <h2>Myeongga Chennai <span>Restaurant</span></h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/meyenga/11zon_compressed/11zon_compressed/1_16_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/meyenga/11zon_compressed/11zon_compressed/2_17_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/meyenga/11zon_compressed/11zon_compressed/3_18_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/meyenga/11zon_compressed/11zon_compressed/4_19_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/meyenga/11zon_compressed/11zon_compressed/5_20_11zon.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3>Korean-Themed Interior Furnishing</h3>
+                            <div class="service-tagline-large">Immersive Dining Through Design</div>
+                            <p class="service-description">
+                                We created a Korean-inspired dining space with customized curtains, blinds, floral décor, flooring, and tailored seating. Executed end-to-end by the AnZ team with precision and consistency.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Salon Project -->
+                    <div class="section-header-premium">
+                        <h2>Salon Project</h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/salon/11zon_compressed/11zon_compressed/1_13_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/salon/11zon_compressed/11zon_compressed/2_14_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/salon/11zon_compressed/11zon_compressed/4_15_11zon.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h3>Salon Interior Furnishing</h3>
+                            <div class="service-tagline-large">Style Meets Comfort</div>
+                            <p class="service-description">
+                                Complete salon furnishing including custom sofas, upgraded flooring, refreshed chair upholstery, and carpets—delivered seamlessly by the AnZ team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Shop Project -->
+                    <div class="section-header-premium">
+                        <h2>Shop Project</h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/shop/1.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/shop/2.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/shop/4.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/shop/5.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h3>Concept-Based Retail Interior</h3>
+                            <div class="service-tagline-large">Creative & Engaging Spaces</div>
+                            <p class="service-description">
+                                A unique road-inspired retail concept featuring custom flooring with lane markings and artificial grass, executed end-to-end by the AnZ team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sukkubhai Party Hall -->
+                    <div class="section-header-premium">
+                        <h2>Sukkubhai Party Hall</h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/sukkubhai/1.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/sukkubhai/2.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/sukkubhai/3.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/sukkubhai/4.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-champagne-glasses"></i>
+                            </div>
+                            <h3>Luxury Event Space Furnishing</h3>
+                            <div class="service-tagline-large">Elegance in Every Detail</div>
+                            <p class="service-description">
+                                Complete party hall transformation including wall paneling, custom seating, branded covers, and stage setup—executed with precision by the AnZ team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Suk Office -->
+                    <div class="section-header-premium">
+                        <h2>Suk Office</h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider5">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/suk/1.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/suk/2.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/suk/4.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/suk/5.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Workspace Interior Solution</h3>
+                            <div class="service-tagline-large">Modern & Functional Design</div>
+                            <p class="service-description">
+                                Full office interior solution including partitions, flooring, wallpaper, and furniture setups—executed seamlessly by the AnZ team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Turf Project -->
+                    <div class="section-header-premium">
+                        <h2>Turf Project</h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider6">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/turf/11zon_compressed/11zon_compressed/1_9_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/turf/11zon_compressed/11zon_compressed/2_10_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/turf/11zon_compressed/11zon_compressed/3_11_11zon.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/turf/11zon_compressed/11zon_compressed/4_12_11zon.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Premium Turf Installation</h3>
+                            <div class="service-tagline-large">Natural Look, Lasting Quality</div>
+                            <p class="service-description">
+                                Turf installation completed with proper base preparation, layering, and seamless finishing to ensure durability and a lush natural appearance by the AnZ team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mosque Project -->
+                    <div class="section-header-premium">
+                        <h2>Mosque Project</h2>
+                    </div>
+                    <div class="service-row">
+                        <div class="service-image-box">
+                            <div class="swiper mySlider7">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/mosque/1.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/mosque/2.jpg"></div>
+                                    <div class="swiper-slide"><img src="images/mosque/3.jpg"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="service-content-box">
+                            <div class="service-icon-large">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <h3>Spiritual Interior Design</h3>
+                            <div class="service-tagline-large">Peaceful & Elegant Spaces</div>
+                            <p class="service-description">
+                                Mosque interior designed with custom paneling, premium carpeting, and a refined prayer space setup, executed end-to-end by the AnZ team.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Customer Services -->
+        <div class="s-customer-services tf-spacing-2 sw-layout">
+            <div class="tf-container w-1462">
+                <div class="swiper" data-screen-xl="4" data-preview="3" data-tablet="2" data-mobile-sm="2"
+                    data-mobile="1" data-space-lg="48" data-space-md="20" data-space="15">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="box-icon_v01">
+                                <div class="icon">
+                                    <i class="icon-shipping"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="h5 mb_12 text-uppercase">Free Shipping</div>
+                                    <p class="text-body-default lh-26">Enjoy free shipping on all orders</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-icon_v01">
+                                <div class="icon">
+                                    <i class="icon-payment"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="h5 mb_12 text-uppercase">Flexible Payment</div>
+                                    <p class="text-body-default lh-26">Multiple credit cards accepted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-icon_v01">
+                                <div class="icon">
+                                    <i class="icon-box-return"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="h5 mb_12 text-uppercase">30 Days Return</div>
+                                    <p class="text-body-default lh-26">Within 30 days for a return</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="box-icon_v01">
+                                <div class="icon">
+                                    <i class="icon-support"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="h5 mb_12 text-uppercase">Support Online</div>
+                                    <p class="text-body-default lh-26">Outstanding premium support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-dots sw-pagination-layout text-center mt_24"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-body">
+            <div class="tf-container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="footer-about">
+                            <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
+                            <p class="text-body-default text_white mb_24">
+                                An.Z Home Furnishings provides premium home decor solutions including curtains,
+                                wallpapers, customized sofas, blinds, and flooring to enhance your living space.
+                            </p>
+                            <a href="services.html"
+                                class="hover-underline-link text_white text-body-default text-uppercase">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-lg-5 col-md-6 col-12">
+                        <div class="wrap-footer-col-block">
+                            <div class="footer-col-block">
+                                <div class="h5 footer-title text_white mb_24">Products</div>
+                                <ul class="footer-menu-list d-grid gap_12">
+                                    <li><a href="#" class="link-2 text_white">Curtains</a></li>
+                                    <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
+                                    <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
+                                    <li><a href="#" class="link-2 text_white">Blinds</a></li>
+                                    <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-col-block">
+                                <div class="h5 footer-title text_white mb_24">More Products</div>
+                                <ul class="footer-menu-list d-grid gap_12">
+                                    <li><a href="#" class="link-2 text_white">Mattress</a></li>
+                                    <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
+                                    <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
+                                    <li><a href="#" class="link-2 text_white">Carpets</a></li>
+                                    <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="footer-newsletter">
+                            <div class="footer-title text_white mb_28">
+                                <div class="h5 text-uppercase mb_16 text_white">Contact Us</div>
+                                <ul class="contact-list">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>610, M.K.N Road, Alandur, Chennai - 600016</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:7401130586">+91 7401130586</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <a href="tel:7358560491">+91 7358560491</a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="tf-container">
+                <div class="wrap-footer-bottom">
+                    <p class="text_white">
+                        Copyright © <span id="year"></span>
+                        AnZ Home Furnishings. All Rights Reserved.
+                        Developed By
+                        <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">
+                            Chennai Leads
+                        </a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- Mobile Toolbar -->
+    <div class="tf-toolbar-bottom">
+        <div class="toolbar-item">
+            <a href="services.html">
+                <span class="toolbar-icon"><i class="icon icon-support"></i></span>
+                <span class="toolbar-label">Services</span>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="product.html">
+                <span class="toolbar-icon"><i class="icon icon-storefront"></i></span>
+                <span class="toolbar-label">Shop</span>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="index.html">
+                <span class="toolbar-icon"><i class="icon icon-user"></i></span>
+                <span class="toolbar-label">Home</span>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="gallery.html">
+                <span class="toolbar-icon"><i class="icon icon-heart"></i></span>
+                <span class="toolbar-label">Gallery</span>
+            </a>
+        </div>
+        <div class="toolbar-item">
+            <a href="contact.html">
+                <span class="toolbar-icon"><i class="icon icon-bag"></i></span>
+                <span class="toolbar-label">Contact</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+        <span class="icon-close-popup" data-bs-dismiss="offcanvas">
+            <i class="icon-close"></i>
+        </span>
+        <div class="canvas-header">
+            <a href="index.html" class="site-logo">
+                <img src="images/images/logo.png" alt="An.Z Home Furnishings">
+            </a>
+        </div>
+        <div class="canvas-body">
+            <div class="mb-content-top">
+                <ul class="nav-ul-mb" id="wrapper-menu-navigation"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/count-down.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize main slider
+        var swiper = new Swiper(".mySlider", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            }
+        });
+
+        // Initialize all other sliders
+        [".mySlider1", ".mySlider2", ".mySlider3", ".mySlider4", ".mySlider5", ".mySlider6", ".mySlider7"]
+        .forEach(cls => {
+            new Swiper(cls, {
+                loop: true,
+                autoplay: { 
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: { 
+                    el: cls + " .swiper-pagination", 
+                    clickable: true 
+                }
+            });
+        });
+
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
