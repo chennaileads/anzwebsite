@@ -1562,7 +1562,7 @@
             <!-- /s-categories -->
 
             <!-- s-testimonials -->
-            <section class="s-testimonials tf-spacing-1 sw-layout">
+             <section class="s-testimonials tf-spacing-1 sw-layout">
                 <div class="tf-container">
                     <div class="row align-items-center">
                        <div class="col-lg-7 col-md-6">
@@ -1702,76 +1702,6 @@
         </div>
     </div>
 </div>
-<div class="promise-section" style="background: #f9f9f9; padding: 60px 0; text-align: center;">
-    <div class="tf-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div class="promise-quote" style="font-size: 18px; color: #555; font-style: italic; margin-bottom: 50px; line-height: 1.8; position: relative; display: inline-block; max-width: 700px;">
-            <i class="fas fa-quote-left" style="color: #c49b6c; font-size: 24px; margin-right: 8px; vertical-align: top;"></i>
-            From material selection to final installation, we ensure every detail reflects quality, comfort, and craftsmanship.
-            <i class="fas fa-quote-right" style="color: #c49b6c; font-size: 24px; margin-left: 8px; vertical-align: bottom;"></i>
-        </div>
-        
-        <div class="trust-stats" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
-            <div class="stat-item" style="text-align: center;">
-                <div class="stat-number" data-target="10" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
-                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Years of Excellence</div>
-            </div>
-            <div class="stat-item" style="text-align: center;">
-                <div class="stat-number" data-target="1000" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
-                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Happy Homes Served</div>
-            </div>
-            <div class="stat-item" style="text-align: center;">
-                <div class="stat-number" data-target="100" data-suffix="%" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0%</div>
-                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Customer Satisfaction</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- COUNTER ANIMATION SCRIPT -->
-<script>
-    function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number');
-        const speed = 50; // Lower = faster animation
-
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const suffix = counter.getAttribute('data-suffix') || '';
-            let count = 0;
-            
-            const increment = target / speed;
-            
-            const updateCount = () => {
-                if (count < target) {
-                    count += increment;
-                    counter.innerText = Math.ceil(count) + suffix;
-                    requestAnimationFrame(updateCount);
-                } else {
-                    counter.innerText = target + suffix;
-                }
-            };
-            
-            updateCount();
-        });
-    }
-
-    // Trigger counter animation when section scrolls into view
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const statsSection = document.querySelector('.trust-stats');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
-</script>
-
-<!-- Font Awesome (if not already included) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                         <div class="col-lg-5 col-md-6">
                             <div class="wrap-gallery tf-grid-layout sm-col-2 ">
                                 
@@ -1885,6 +1815,77 @@
                 </div>
             </section>
             <!-- /s-testimonials -->
+<div class="promise-section" style="background: #f9f9f9; padding: 60px 0; text-align: center;">
+    <div class="tf-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="promise-quote" style="font-size: 18px; color: #555; font-style: italic; margin-bottom: 50px; line-height: 1.8; position: relative; display: inline-block; max-width: 700px;">
+            <i class="fas fa-quote-left" style="color: #c49b6c; font-size: 24px; margin-right: 8px; vertical-align: top;"></i>
+            From material selection to final installation, we ensure every detail reflects quality, comfort, and craftsmanship.
+            <i class="fas fa-quote-right" style="color: #c49b6c; font-size: 24px; margin-left: 8px; vertical-align: bottom;"></i>
+        </div>
+        
+        <div class="trust-stats" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
+            <div class="stat-item" style="text-align: center;">
+                <div class="stat-number" data-target="10" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
+                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Years of Excellence</div>
+            </div>
+            <div class="stat-item" style="text-align: center;">
+                <div class="stat-number" data-target="1000" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
+                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Happy Homes Served</div>
+            </div>
+            <div class="stat-item" style="text-align: center;">
+                <div class="stat-number" data-target="100" data-suffix="%" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0%</div>
+                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Customer Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COUNTER ANIMATION SCRIPT -->
+<script>
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 50; // Lower = faster animation
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const suffix = counter.getAttribute('data-suffix') || '';
+            let count = 0;
+            
+            const increment = target / speed;
+            
+            const updateCount = () => {
+                if (count < target) {
+                    count += increment;
+                    counter.innerText = Math.ceil(count) + suffix;
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target + suffix;
+                }
+            };
+            
+            updateCount();
+        });
+    }
+
+    // Trigger counter animation when section scrolls into view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.trust-stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+</script>
+
+<!-- Font Awesome (if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
             <!-- s-banner-lookbook -->
             <!-- <section class="tf-spacing-3 s-banner-lookbook sw-layout ">
