@@ -26,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.svg">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/images/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/images/logo.png">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -124,7 +124,6 @@
             overflow: hidden;
         }
         
-        /* Dark overlay */
         .tf-page-title::before {
             content: '';
             position: absolute;
@@ -135,7 +134,6 @@
             z-index: 1;
         }
         
-        /* Subtle pattern overlay */
         .tf-page-title::after {
             content: '';
             position: absolute;
@@ -683,137 +681,283 @@
             opacity: 0.8;
         }
         
+        /* ===== STICKY CONTACT NAV ===== */
+        .sticky-contact-nav {
+            position: fixed;
+            bottom: 85px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 14px;
+            z-index: 99999;
+        }
+
+        .contact-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .contact-circle i {
+            font-size: 24px;
+            transition: transform 0.2s;
+        }
+
+        .contact-circle:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .circle-whatsapp { background: #25D366; }
+        .circle-call { background: #0b7fb7; }
+        .circle-mail { background: #e87d4b; }
+
+        .contact-circle::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 68px;
+            background: #1e2b3c;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .contact-circle:hover::after { opacity: 1; }
+
+        @media (max-width: 768px) {
+            .sticky-contact-nav {
+                bottom: 90px;
+                right: 14px;
+                gap: 12px;
+            }
+            .contact-circle {
+                width: 48px;
+                height: 48px;
+            }
+            .contact-circle i { font-size: 20px; }
+            .contact-circle::after { display: none; }
+        }
+
+        /* ===== POPUP OVERLAY ===== */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 20, 30, 0.7);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.25s ease;
+            padding: 1rem;
+        }
+
+        .popup-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup-card {
+            background: #ffffff;
+            max-width: 520px;
+            width: 100%;
+            max-height: 85vh;
+            border-radius: 32px;
+            box-shadow: 0 35px 60px rgba(0,0,0,0.35);
+            overflow-y: auto;
+            padding: 2rem 1.8rem 2.2rem;
+            position: relative;
+            transform: scale(0.94);
+            transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e0 #f1f5f9;
+        }
+
+        .popup-overlay.active .popup-card { transform: scale(1); }
+
+        .popup-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: #f0f3f7;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            color: #2d3a4a;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .popup-close-btn:hover {
+            background: #e0e7ef;
+            color: #0b1c2e;
+        }
+
+        .popup-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1e2f40;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .popup-title i { color: #e87d4b; font-size: 1.8rem; }
+
+        .form-row-custom {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .form-group-custom {
+            flex: 1 1 0%;
+            min-width: 140px;
+            margin-bottom: 16px;
+        }
+
+        .form-input-custom {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            background: #f9fbfd;
+            transition: all 0.2s ease;
+            outline: none;
+            color: #1a2b3c;
+            font-weight: 450;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-input-custom:focus {
+            border-color: #e87d4b;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(232,125,75,0.15);
+        }
+
+        select.form-input-custom {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234b5563" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 1.1rem center;
+            background-size: 18px;
+            padding-right: 2.8rem;
+        }
+
+        textarea.form-input-custom { min-height: 100px; }
+
+        .submit-btn-custom {
+            background: #1e2f40;
+            color: white;
+            border: none;
+            padding: 0.95rem 2.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: background 0.25s, transform 0.15s;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+            margin-top: 0.8rem;
+        }
+
+        .submit-btn-custom:hover {
+            background: #152433;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 500px) {
+            .popup-card { padding: 1.8rem 1.3rem 2rem; }
+            .form-row-custom { flex-direction: column; gap: 0; }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
-            .service-content-box {
-                padding: 20px 25px;
-            }
-            
-            .feature-list-premium {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-header-premium h2 {
-                font-size: 32px;
-            }
-            
-            .service-image-box {
-                min-height: 250px;
-                max-height: 280px;
-            }
+            .service-content-box { padding: 20px 25px; }
+            .feature-list-premium { grid-template-columns: 1fr; }
+            .section-header-premium h2 { font-size: 32px; }
+            .service-image-box { min-height: 250px; max-height: 280px; }
         }
         
         @media (max-width: 991px) {
-            .service-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-            
-            .service-image-box {
-                min-height: 220px;
-                max-height: 250px;
-            }
-            
-            .service-content-box {
-                padding: 25px 20px;
-            }
-            
-            .service-content-box h3 {
-                font-size: 20px;
-            }
-            
-            .section-header-premium h2 {
-                font-size: 28px;
-            }
+            .service-row { grid-template-columns: 1fr; gap: 0; }
+            .service-image-box { min-height: 220px; max-height: 250px; }
+            .service-content-box { padding: 25px 20px; }
+            .service-content-box h3 { font-size: 20px; }
+            .section-header-premium h2 { font-size: 28px; }
         }
         
         @media (max-width: 767px) {
-            .featured-services-premium {
-                padding: 40px 0;
-            }
-            
-            .section-header-premium h2 {
-                font-size: 24px;
-            }
-            
-            .service-image-box {
-                min-height: 200px;
-                max-height: 220px;
-            }
-            
-            .service-icon-large {
-                width: 45px;
-                height: 45px;
-                font-size: 20px;
-            }
-            
-            .tf-page-title .title {
-                font-size: 28px;
-            }
-            
-            .tf-page-title {
-                padding: 50px 0;
-            }
-            
-            .box-icon_v01 {
-                padding: 18px 12px;
-            }
+            .featured-services-premium { padding: 40px 0; }
+            .section-header-premium h2 { font-size: 24px; }
+            .service-image-box { min-height: 200px; max-height: 220px; }
+            .service-icon-large { width: 45px; height: 45px; font-size: 20px; }
+            .tf-page-title .title { font-size: 28px; }
+            .tf-page-title { padding: 50px 0; }
+            .box-icon_v01 { padding: 18px 12px; }
         }
         
         @media (max-width: 480px) {
-            .section-header-premium h2 {
-                font-size: 20px;
-            }
-            
-            .service-content-box {
-                padding: 18px 15px;
-            }
-            
-            .service-content-box h3 {
-                font-size: 18px;
-            }
-            
-            .feature-list-premium {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-image-box {
-                min-height: 180px;
-                max-height: 200px;
-            }
-            
-            .tf-page-title {
-                padding: 40px 0;
-            }
-            
-            .tf-page-title .title {
-                font-size: 24px;
-            }
+            .section-header-premium h2 { font-size: 20px; }
+            .service-content-box { padding: 18px 15px; }
+            .service-content-box h3 { font-size: 18px; }
+            .feature-list-premium { grid-template-columns: 1fr; }
+            .service-image-box { min-height: 180px; max-height: 200px; }
+            .tf-page-title { padding: 40px 0; }
+            .tf-page-title .title { font-size: 24px; }
         }
-        .tf-page-title,
-.tf-page-title h2,
-.tf-page-title li,
-.tf-page-title a {
-    color: #fff !important;
-} 
-    
-    .tf-page-title {
-    text-align: center;
-}
 
-.breadcrumb-list {
-    display: inline-flex;
-    justify-content: center;
-    padding: 0;
-    margin: 10px auto 0;
-    list-style: none;
-    gap: 8px;
-}
+        .tf-page-title,
+        .tf-page-title h2,
+        .tf-page-title li,
+        .tf-page-title a { color: #fff !important; } 
+        
+        .tf-page-title { text-align: center; }
+
+        .breadcrumb-list {
+            display: inline-flex;
+            justify-content: center;
+            padding: 0;
+            margin: 10px auto 0;
+            list-style: none;
+            gap: 8px;
+        }
     </style>
 </head>
 
 <body>
-    <!-- wrapper -->
     <div id="wrapper">
 
         <!-- Scroll Top -->
@@ -832,45 +976,30 @@
             <div class="tf-container w-1750">
                 <div class="header-inner">
                     <a href="index.html" class="site-logo">
-                        <img src="images/images/logo.png" alt="AnZ Home Furnishings">
+                        <img src="images/images/logo.png" alt="An.Z Home Furnishings">
                     </a>
                     <nav class="main-menu">
                         <ul class="navigation box-nav-menu">
-                            <li class="text-menu menu-item">
-                                <a href="index.html" class="item-link">Home</a>
-                            </li>
-                            <li class="text-menu menu-item">
-                                <a href="services.html" class="item-link">Services</a>
-                            </li>
-                            <li class="text-menu menu-item">
-                                <a href="product.html" class="item-link">Product</a>
-                            </li>
-                            <li class="text-menu menu-item">
-                                <a href="gallery.html" class="item-link">Gallery</a>
-                            </li>
-                            <li class="text-menu menu-item">
-                                <a href="contact.html" class="item-link">Contact</a>
-                            </li>
+                            <li class="text-menu menu-item"><a href="index.html" class="item-link">Home</a></li>
+                            <li class="text-menu menu-item"><a href="services.html" class="item-link">Services</a></li>
+                            <li class="text-menu menu-item"><a href="product.html" class="item-link">Product</a></li>
+                            <li class="text-menu menu-item"><a href="gallery.html" class="item-link">Gallery</a></li>
+                            <li class="text-menu menu-item"><a href="contact.html" class="item-link">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="header-right d-flex align-items-center gap_20">
                         <ul class="nav-icon-list">
-                            <li>
-                                <a href="contact.html"
-                                    class="btn btn-dark text-warning px-4 py-2 fs-6 fw-bold rounded-3 nav-icon-item link">
-                                    Contact Us
-                                </a>
-                            </li>
+                            <li><a href="contact.html" class="btn btn-dark text-warning px-4 py-2 fs-6 fw-bold rounded-3 nav-icon-item link">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Page Title with Background Image -->
+        <!-- Page Title -->
         <div class="tf-page-title">
             <h2 class="text-center text-uppercase title">Our Projects</h2>
-            <ul class="breadcrumb-list text-center ">
+            <ul class="breadcrumb-list text-center">
                 <li><a href="index.html">Home</a></li>
                 <li>Projects</li>
             </ul>
@@ -882,55 +1011,37 @@
             <!-- Hakkoido Japanese Restaurant -->
             <section class="featured-services-premium">
                 <div class="tf-container">
-                    
                     <div class="section-header-premium wow fadeInUp">
-<span class="section-badge">Latest Project Highlights</span>                        <h2>Hakkoido Japanese Restaurant <span>Bangalore</span></h2>
+                        <span class="section-badge">Latest Project Highlights</span>
+                        <h2>Hakkoido Japanese Restaurant <span>Bangalore</span></h2>
                         <p>Crafting authentic Japanese-inspired interiors with precision, elegance, and complete turnkey execution</p>
                     </div>
-                    
                     <div class="services-premium-grid">
                         <div class="service-row wow fadeInUp" data-wow-delay="0.1s">
                             <div class="service-image-box">
                                 <div class="swiper mySlider">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="images/hakoida/1.jpg" onerror="this.src='https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg'">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/hakoida/5.jpg" onerror="this.src='https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg'">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/hakoida/3.jpg" onerror="this.src='https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg'">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/hakoida/7.jpg" onerror="this.src='https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg'">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="images/hakoida/8.jpg" onerror="this.src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'">
-                                        </div>
+                                        <div class="swiper-slide"><img src="images/hakoida/1.jpg"></div>
+                                        <div class="swiper-slide"><img src="images/hakoida/5.jpg"></div>
+                                        <div class="swiper-slide"><img src="images/hakoida/3.jpg"></div>
+                                        <div class="swiper-slide"><img src="images/hakoida/7.jpg"></div>
+                                        <div class="swiper-slide"><img src="images/hakoida/8.jpg"></div>
                                     </div>
                                     <div class="swiper-pagination"></div>
                                 </div>
                             </div>
-
                             <div class="service-content-box">
-                                <div class="service-icon-large">
-                                    <i class="fas fa-torii-gate"></i>
-                                </div>
+                                <div class="service-icon-large"><i class="fas fa-torii-gate"></i></div>
                                 <h3>Themed Interior Furnishing</h3>
                                 <div class="service-tagline-large">Inspired by Tradition, Designed for Experience</div>
-                                <p class="service-description">
-                                    For Hakkoido Japanese Restaurant, we delivered a complete interior furnishing solution inspired by traditional Japanese aesthetics. Every detail was thoughtfully designed to reflect cultural authenticity while maintaining modern functionality.
-                                </p>
+                                <p class="service-description">For Hakkoido Japanese Restaurant, we delivered a complete interior furnishing solution inspired by traditional Japanese aesthetics.</p>
                                 <ul class="feature-list-premium">
                                     <li><i class="fas fa-check-circle"></i> Custom-designed Japanese-themed blinds & curtains</li>
                                     <li><i class="fas fa-check-circle"></i> Concept-based flooring aligned with interior theme</li>
                                     <li><i class="fas fa-check-circle"></i> Tailor-made tables and seating solutions</li>
                                     <li><i class="fas fa-check-circle"></i> End-to-end execution from design to installation</li>
                                 </ul>
-                                <div class="cta-text">
-                                    <i class="fas fa-star"></i> Executed seamlessly by AnZ Home Furnishings with precision and craftsmanship.
-                                </div>
+                                <div class="cta-text"><i class="fas fa-star"></i> Executed seamlessly by AnZ Home Furnishings with precision and craftsmanship.</div>
                             </div>
                         </div>
                     </div>
@@ -942,9 +1053,7 @@
                 <div class="tf-container">
 
                     <!-- Myeongga Chennai -->
-                    <div class="section-header-premium">
-                        <h2>Myeongga Chennai <span>Restaurant</span></h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Myeongga Chennai <span>Restaurant</span></h2><p>Crafting immersive Korean-inspired dining interiors with cultural elegance and complete turnkey execution</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider1">
@@ -959,21 +1068,15 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-utensils"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-utensils"></i></div>
                             <h3>Korean-Themed Interior Furnishing</h3>
                             <div class="service-tagline-large">Immersive Dining Through Design</div>
-                            <p class="service-description">
-                                We created a Korean-inspired dining space with customized curtains, blinds, floral décor, flooring, and tailored seating. Executed end-to-end by the AnZ team with precision and consistency.
-                            </p>
+                            <p class="service-description">We created a Korean-inspired dining space with customized curtains, blinds, floral décor, flooring, and tailored seating.</p>
                         </div>
                     </div>
 
                     <!-- Salon Project -->
-                    <div class="section-header-premium">
-                        <h2>Salon Project</h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Salon Project</h2><p>Designing stylish and comfortable salon interiors with modern aesthetics and seamless turnkey execution</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider2">
@@ -986,21 +1089,15 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-cut"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-cut"></i></div>
                             <h3>Salon Interior Furnishing</h3>
                             <div class="service-tagline-large">Style Meets Comfort</div>
-                            <p class="service-description">
-                                Complete salon furnishing including custom sofas, upgraded flooring, refreshed chair upholstery, and carpets—delivered seamlessly by the AnZ team.
-                            </p>
+                            <p class="service-description">Complete salon furnishing including custom sofas, upgraded flooring, refreshed chair upholstery, and carpets.</p>
                         </div>
                     </div>
 
                     <!-- Shop Project -->
-                    <div class="section-header-premium">
-                        <h2>Shop Project</h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Shop Project</h2><p>Creating innovative retail interiors with unique concept-driven designs and complete turnkey execution</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider3">
@@ -1014,21 +1111,15 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-store"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-store"></i></div>
                             <h3>Concept-Based Retail Interior</h3>
                             <div class="service-tagline-large">Creative & Engaging Spaces</div>
-                            <p class="service-description">
-                                A unique road-inspired retail concept featuring custom flooring with lane markings and artificial grass, executed end-to-end by the AnZ team.
-                            </p>
+                            <p class="service-description">A unique road-inspired retail concept featuring custom flooring with lane markings and artificial grass.</p>
                         </div>
                     </div>
 
                     <!-- Sukkubhai Party Hall -->
-                    <div class="section-header-premium">
-                        <h2>Sukkubhai Party Hall</h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Sukkubhai Party Hall</h2><p>Delivering luxurious event space interiors with elegant finishes and flawless turnkey execution</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider4">
@@ -1042,21 +1133,15 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-champagne-glasses"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-champagne-glasses"></i></div>
                             <h3>Luxury Event Space Furnishing</h3>
                             <div class="service-tagline-large">Elegance in Every Detail</div>
-                            <p class="service-description">
-                                Complete party hall transformation including wall paneling, custom seating, branded covers, and stage setup—executed with precision by the AnZ team.
-                            </p>
+                            <p class="service-description">Complete party hall transformation including wall paneling, custom seating, branded covers, and stage setup.</p>
                         </div>
                     </div>
 
                     <!-- Suk Office -->
-                    <div class="section-header-premium">
-                        <h2>Suk Office</h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Suk Office</h2><p>Building modern workspace interiors with smart functionality and efficient turnkey execution</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider5">
@@ -1070,21 +1155,15 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-briefcase"></i></div>
                             <h3>Workspace Interior Solution</h3>
                             <div class="service-tagline-large">Modern & Functional Design</div>
-                            <p class="service-description">
-                                Full office interior solution including partitions, flooring, wallpaper, and furniture setups—executed seamlessly by the AnZ team.
-                            </p>
+                            <p class="service-description">Full office interior solution including partitions, flooring, wallpaper, and furniture setups.</p>
                         </div>
                     </div>
 
                     <!-- Turf Project -->
-                    <div class="section-header-premium">
-                        <h2>Turf Project</h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Turf Project</h2><p>Installing premium-quality turf solutions with natural aesthetics and durability</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider6">
@@ -1098,21 +1177,15 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-leaf"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-leaf"></i></div>
                             <h3>Premium Turf Installation</h3>
                             <div class="service-tagline-large">Natural Look, Lasting Quality</div>
-                            <p class="service-description">
-                                Turf installation completed with proper base preparation, layering, and seamless finishing to ensure durability and a lush natural appearance by the AnZ team.
-                            </p>
+                            <p class="service-description">Turf installation completed with proper base preparation, layering, and seamless finishing.</p>
                         </div>
                     </div>
 
                     <!-- Mosque Project -->
-                    <div class="section-header-premium">
-                        <h2>Mosque Project</h2>
-                    </div>
+                    <div class="section-header-premium"><h2>Mosque Project</h2><p>Designing peaceful and elegant spiritual interiors with refined detailing</p></div>
                     <div class="service-row">
                         <div class="service-image-box">
                             <div class="swiper mySlider7">
@@ -1125,14 +1198,10 @@
                             </div>
                         </div>
                         <div class="service-content-box">
-                            <div class="service-icon-large">
-                                <i class="fas fa-mosque"></i>
-                            </div>
+                            <div class="service-icon-large"><i class="fas fa-mosque"></i></div>
                             <h3>Spiritual Interior Design</h3>
                             <div class="service-tagline-large">Peaceful & Elegant Spaces</div>
-                            <p class="service-description">
-                                Mosque interior designed with custom paneling, premium carpeting, and a refined prayer space setup, executed end-to-end by the AnZ team.
-                            </p>
+                            <p class="service-description">Mosque interior designed with custom paneling, premium carpeting, and a refined prayer space setup.</p>
                         </div>
                     </div>
 
@@ -1141,150 +1210,129 @@
 
         </div>
 
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-body">
-            <div class="tf-container">
-                <div class="row">
-                    <!-- About -->
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="footer-about">
-                            <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
-                            <p class="text-body-default text_white mb_24">
-                                AnZ Home Furnishings provides premium home decor solutions including curtains,
-                                wallpapers, customized sofas, blinds, and flooring to enhance your living space.
-                            </p>
-                            <a href="services.html"
-                                class="hover-underline-link text_white text-body-default text-uppercase">
-                                Learn More
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Products -->
-                    <div class="col-lg-5 col-md-6 col-12">
-                        <div class="wrap-footer-col-block">
-                            <div class="footer-col-block">
-                                <div class="h5 footer-title text_white mb_24">Products</div>
-                                <ul class="footer-menu-list d-grid gap_12">
-                                    <li><a href="#" class="link-2 text_white">Curtains</a></li>
-                                    <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
-                                    <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
-                                    <li><a href="#" class="link-2 text_white">Blinds</a></li>
-                                    <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-col-block">
-                                <div class="h5 footer-title text_white mb_24">More Products</div>
-                                <ul class="footer-menu-list d-grid gap_12">
-                                    <li><a href="#" class="link-2 text_white">Mattress</a></li>
-                                    <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
-                                    <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
-                                    <li><a href="#" class="link-2 text_white">Carpets</a></li>
-                                    <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
-                                </ul>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-body">
+                <div class="tf-container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="footer-about">
+                                <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
+                                <p class="text-body-default text_white mb_24">An.Z Home Furnishings provides premium home decor solutions including curtains, wallpapers, customized sofas, blinds, and flooring to enhance your living space.</p>
+                                <a href="services.html" class="hover-underline-link text_white text-body-default text-uppercase">Learn More</a>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Contact -->
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="footer-newsletter">
-                            <div class="footer-title text_white mb_28">
-                                <div class="h5 text-uppercase mb_16 text_white">Contact Us</div>
-                                <ul class="contact-list">
-                                    <li>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>610, M.K.N Road, Alandur, Chennai - 600016</span>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-phone-alt"></i>
-                                        <a href="tel:7401130586">+91 7401130586</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-phone-alt"></i>
-                                        <a href="tel:7358560491">+91 7358560491</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-envelope"></i>
-                                        <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-5 col-md-6 col-12">
+                            <div class="wrap-footer-col-block">
+                                <div class="footer-col-block">
+                                    <div class="h5 footer-title text_white mb_24">Products</div>
+                                    <ul class="footer-menu-list d-grid gap_12">
+                                        <li><a href="#" class="link-2 text_white">Curtains</a></li>
+                                        <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
+                                        <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
+                                        <li><a href="#" class="link-2 text_white">Blinds</a></li>
+                                        <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-col-block">
+                                    <div class="h5 footer-title text_white mb_24">More Products</div>
+                                    <ul class="footer-menu-list d-grid gap_12">
+                                        <li><a href="#" class="link-2 text_white">Mattress</a></li>
+                                        <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
+                                        <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
+                                        <li><a href="#" class="link-2 text_white">Carpets</a></li>
+                                        <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="footer-newsletter">
+                                <div class="footer-title text_white mb_28">
+                                    <div class="h5 text-uppercase mb_16 text_white">Contact Us</div>
+                                    <ul class="contact-list">
+                                        <li><i class="fas fa-map-marker-alt"></i><span>610, M.K.N Road, Alandur, Chennai - 600016</span></li>
+                                        <li><i class="fas fa-phone-alt"></i><a href="tel:7401130586">+91 7401130586</a></li>
+                                        <li><i class="fas fa-phone-alt"></i><a href="tel:7358560491">+91 7358560491</a></li>
+                                        <li><i class="fas fa-envelope"></i><a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="tf-container">
-                <div class="wrap-footer-bottom">
-                    <p class="text_white">
-                        Copyright © <span id="year"></span>
-                        AnZ Home Furnishings. All Rights Reserved.
-                        Developed By
-                        <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">
-                            Chennai Leads
-                        </a>.
-                    </p>
+            <div class="footer-bottom">
+                <div class="tf-container">
+                    <div class="wrap-footer-bottom">
+                        <p class="text_white">Copyright © <span id="year"></span> AnZ Home Furnishings. All Rights Reserved. Developed By <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">Chennai Leads</a>.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
+        </footer>
     </div>
 
     <!-- Mobile Toolbar -->
     <div class="tf-toolbar-bottom">
-        <div class="toolbar-item">
-            <a href="services.html">
-                <span class="toolbar-icon"><i class="icon icon-support"></i></span>
-                <span class="toolbar-label">Services</span>
-            </a>
-        </div>
-        <div class="toolbar-item">
-            <a href="product.html">
-                <span class="toolbar-icon"><i class="icon icon-storefront"></i></span>
-                <span class="toolbar-label">Shop</span>
-            </a>
-        </div>
-        <div class="toolbar-item">
-            <a href="index.html">
-                <span class="toolbar-icon"><i class="icon icon-user"></i></span>
-                <span class="toolbar-label">Home</span>
-            </a>
-        </div>
-        <div class="toolbar-item">
-            <a href="gallery.html">
-                <span class="toolbar-icon"><i class="icon icon-heart"></i></span>
-                <span class="toolbar-label">Gallery</span>
-            </a>
-        </div>
-        <div class="toolbar-item">
-            <a href="contact.html">
-                <span class="toolbar-icon"><i class="icon icon-bag"></i></span>
-                <span class="toolbar-label">Contact</span>
-            </a>
-        </div>
+        <div class="toolbar-item"><a href="services.html"><span class="toolbar-icon"><i class="icon icon-support"></i></span><span class="toolbar-label">Services</span></a></div>
+        <div class="toolbar-item"><a href="product.html"><span class="toolbar-icon"><i class="icon icon-storefront"></i></span><span class="toolbar-label">Shop</span></a></div>
+        <div class="toolbar-item"><a href="index.html"><span class="toolbar-icon"><i class="icon icon-user"></i></span><span class="toolbar-label">Home</span></a></div>
+        <div class="toolbar-item"><a href="gallery.html"><span class="toolbar-icon"><i class="icon icon-heart"></i></span><span class="toolbar-label">Gallery</span></a></div>
+        <div class="toolbar-item"><a href="contact.html"><span class="toolbar-icon"><i class="icon icon-bag"></i></span><span class="toolbar-label">Contact</span></a></div>
     </div>
 
     <!-- Mobile Menu -->
     <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
-        <span class="icon-close-popup" data-bs-dismiss="offcanvas">
-            <i class="icon-close"></i>
-        </span>
-        <div class="canvas-header">
-            <a href="index.html" class="site-logo">
-                <img src="images/images/logo.png" alt="AnZ Home Furnishings">
-            </a>
+        <span class="icon-close-popup" data-bs-dismiss="offcanvas"><i class="icon-close"></i></span>
+        <div class="canvas-header"><a href="index.html" class="site-logo"><img src="images/images/logo.png" alt="An.Z Home Furnishings"></a></div>
+        <div class="canvas-body"><div class="mb-content-top"><ul class="nav-ul-mb" id="wrapper-menu-navigation"></ul></div></div>
+    </div>
+
+    <!-- ========== STICKY CONTACT ICONS ========== -->
+    <div class="sticky-contact-nav">
+        <a href="https://wa.me/917401130586?text=Hello%20there" target="_blank" rel="noopener noreferrer" class="contact-circle circle-whatsapp" data-tooltip="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917401130586" class="contact-circle circle-call" data-tooltip="Call now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <div class="contact-circle circle-mail" id="openPopupBtn" data-tooltip="Send inquiry">
+            <i class="fas fa-envelope"></i>
         </div>
-        <div class="canvas-body">
-            <div class="mb-content-top">
-                <ul class="nav-ul-mb" id="wrapper-menu-navigation"></ul>
-            </div>
+    </div>
+
+    <!-- ========== POPUP FORM ========== -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card">
+            <button class="popup-close-btn" id="closePopupBtn"><i class="fas fa-times"></i></button>
+            <div class="popup-title"><i class="fas fa-paper-plane"></i> Quick Inquiry</div>
+            <form id="popupInquiryForm">
+                <div class="form-row-custom">
+                    <div class="form-group-custom"><input type="text" class="form-input-custom" placeholder="Full Name *" required></div>
+                    <div class="form-group-custom"><input type="tel" class="form-input-custom" placeholder="Phone Number *" required></div>
+                </div>
+                <div class="form-row-custom">
+                    <div class="form-group-custom"><input type="email" class="form-input-custom" placeholder="Email Address *" required></div>
+                    <div class="form-group-custom">
+                        <select class="form-input-custom" required>
+                            <option value="">Select Product *</option>
+                            <option>Curtains & Drapes</option>
+                            <option>Customized Sofas</option>
+                            <option>Wall Papers</option>
+                            <option>Blinds & Shades</option>
+                            <option>Artificial Grass</option>
+                            <option>Vinyl Flooring</option>
+                            <option>Wooden Flooring</option>
+                            <option>Carpets & Rugs</option>
+                            <option>Mosquito Nets</option>
+                            <option>Mattress Protection</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group-custom"><input type="text" class="form-input-custom" placeholder="Subject (Optional)"></div>
+                <div class="form-group-custom"><textarea class="form-input-custom" placeholder="Your Message / Requirements *" required></textarea></div>
+                <button type="submit" class="submit-btn-custom">Send Message <i class="fas fa-arrow-right"></i></button>
+            </form>
         </div>
     </div>
 
@@ -1303,14 +1351,8 @@
         // Initialize main slider
         var swiper = new Swiper(".mySlider", {
             loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            }
+            autoplay: { delay: 3000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true }
         });
 
         // Initialize all other sliders
@@ -1318,19 +1360,55 @@
         .forEach(cls => {
             new Swiper(cls, {
                 loop: true,
-                autoplay: { 
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: { 
-                    el: cls + " .swiper-pagination", 
-                    clickable: true 
-                }
+                autoplay: { delay: 2500, disableOnInteraction: false },
+                pagination: { el: cls + " .swiper-pagination", clickable: true }
             });
         });
 
         // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ===== STICKY POPUP JS =====
+        (function() {
+            const overlay = document.getElementById('popupOverlay');
+            const openBtn = document.getElementById('openPopupBtn');
+            const closeBtn = document.getElementById('closePopupBtn');
+            const popupForm = document.getElementById('popupInquiryForm');
+
+            if (openBtn) {
+                openBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    overlay.classList.add('active');
+                });
+            }
+
+            function closePopup() {
+                overlay.classList.remove('active');
+            }
+
+            if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) closePopup();
+                });
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                    closePopup();
+                }
+            });
+
+            if (popupForm) {
+                popupForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('📬 Thank you! Your inquiry has been submitted.');
+                    closePopup();
+                    popupForm.reset();
+                });
+            }
+        })();
     </script>
 
 </body>
