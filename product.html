@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="author" content="themesflat.com">
-    <title>AnZ Home Furnishings | Premium Custom Furniture & Decor</title>
+    <title>An.Z Home Furnishings | Premium Custom Furniture & Decor</title>
     <meta name="description" content="Premium custom sofas, curtains, flooring, wallpapers & home furnishings. 10+ years experience, 1000+ happy homes.">
     <meta name="keywords" content="custom sofas, curtains, blinds, flooring, wallpapers, home furnishings Chennai">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -20,33 +20,15 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
-    <link rel="shortcut icon" href="images/favicon.svg">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/images/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/images/logo.png">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* ===== GRAND ELEGANT ECOMMERCE DESIGN ===== */
-        .tf-page-title,
-.tf-page-title h2,
-.tf-page-title li,
-.tf-page-title a {
-    color: #fff !important;
-} 
-    
-    .tf-page-title {
-    text-align: center;
-}
-
-.breadcrumb-list {
-    display: inline-flex;
-    justify-content: center;
-    padding: 0;
-    margin: 10px auto 0;
-    list-style: none;
-    gap: 8px;
-}
+        
         :root {
             --gold: #c19a6b;
             --gold-light: #d4a373;
@@ -1060,7 +1042,25 @@
             padding: 0;
             margin: 0;
         }
-        
+        .tf-page-title,
+.tf-page-title h2,
+.tf-page-title li,
+.tf-page-title a {
+    color: #fff !important;
+} 
+    
+    .tf-page-title {
+    text-align: center;
+}
+
+.breadcrumb-list {
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px auto 0;
+    list-style: none;
+    gap: 8px;
+}
         .contact-list li {
             display: flex;
             align-items: flex-start;
@@ -1076,58 +1076,289 @@
             min-width: 20px;
         }
         
-         :root {
-            --primary-dark: #0a2c2d;
-            --primary-gold: #c19a6b;
-            --accent-cream: #f9f5f0;
-            --border-light: #e8e0d8;
-            --text-dark: #1e293b;
-        }
-
-        .contact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .contact-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 14px;
-            line-height: 1.6;
-        }
-
-        .contact-list i {
-            font-size: 16px;
-            color: #c19a6b;
-            /* premium gold color */
-            margin-top: 4px;
-            min-width: 20px;
-        }
-
         .contact-list span,
         .contact-list a {
             color: #fff;
             text-decoration: none;
             font-size: 14px;
         }
-
+        
         .contact-list a:hover {
-            color: #c19a6b;
-        }
-
-        .contact-list i {
-            color: #c19a6b;
-        }
-
-        .list-info li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            line-height: 1.6;
+            color: var(--gold);
         }
         
+        /* ===== STICKY CONTACT NAV ===== */
+        .sticky-contact-nav {
+            position: fixed;
+            bottom: 85px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 14px;
+            z-index: 99999;
+        }
+
+        .contact-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .contact-circle i {
+            font-size: 24px;
+            transition: transform 0.2s;
+        }
+
+        .contact-circle:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .circle-whatsapp {
+            background: #25D366;
+        }
+        .circle-call {
+            background: #0b7fb7;
+        }
+        .circle-mail {
+            background: #e87d4b;
+        }
+
+        .contact-circle::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 68px;
+            background: #1e2b3c;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .contact-circle:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-contact-nav {
+                bottom: 90px;
+                right: 14px;
+                gap: 12px;
+            }
+            .contact-circle {
+                width: 48px;
+                height: 48px;
+            }
+            .contact-circle i {
+                font-size: 20px;
+            }
+            .contact-circle::after {
+                display: none;
+            }
+        }
+
+        /* ===== POPUP OVERLAY ===== */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 20, 30, 0.7);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.25s ease;
+            padding: 1rem;
+        }
+
+        .popup-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup-card {
+            background: #ffffff;
+            max-width: 520px;
+            width: 100%;
+            max-height: 85vh;
+            border-radius: 32px;
+            box-shadow: 0 35px 60px rgba(0,0,0,0.35);
+            overflow-y: auto;
+            padding: 2rem 1.8rem 2.2rem;
+            position: relative;
+            transform: scale(0.94);
+            transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e0 #f1f5f9;
+        }
+
+        .popup-overlay.active .popup-card {
+            transform: scale(1);
+        }
+
+        .popup-card::-webkit-scrollbar {
+            width: 6px;
+        }
+        .popup-card::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .popup-card::-webkit-scrollbar-thumb {
+            background: #b9c7da;
+            border-radius: 8px;
+        }
+
+        .popup-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: #f0f3f7;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            color: #2d3a4a;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+
+        .popup-close-btn:hover {
+            background: #e0e7ef;
+            color: #0b1c2e;
+        }
+
+        .popup-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1e2f40;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .popup-title i {
+            color: #e87d4b;
+            font-size: 1.8rem;
+        }
+
+        .form-row-custom {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .form-group-custom {
+            flex: 1 1 0%;
+            min-width: 140px;
+            margin-bottom: 16px;
+        }
+
+        .form-input-custom {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            background: #f9fbfd;
+            transition: all 0.2s ease;
+            outline: none;
+            color: #1a2b3c;
+            font-weight: 450;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-input-custom:focus {
+            border-color: #e87d4b;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(232,125,75,0.15);
+        }
+
+        select.form-input-custom {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234b5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 1.1rem center;
+            background-size: 18px;
+            padding-right: 2.8rem;
+        }
+
+        textarea.form-input-custom {
+            min-height: 100px;
+        }
+
+        .submit-btn-custom {
+            background: #1e2f40;
+            color: white;
+            border: none;
+            padding: 0.95rem 2.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: background 0.25s, transform 0.15s;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+            width: auto;
+            margin-top: 0.8rem;
+        }
+
+        .submit-btn-custom:hover {
+            background: #152433;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn-custom i {
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .submit-btn-custom:hover i {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 500px) {
+            .popup-card {
+                padding: 1.8rem 1.3rem 2rem;
+            }
+            .form-row-custom {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1200px) {
             .product-grid {
@@ -1271,40 +1502,11 @@
                 height: 90px;
             }
         }
-         <style>
-        
-        /* Top Bar */
-        .top-bar {
-            background: var(--primary-dark);
-            color: #fff;
-            padding: 12px 24px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 500;
-        }
 
-        /* Header */
-      
         .tf-container {
             max-width: 1750px;
             margin: 0 auto;
             padding: 0 32px;
-        }
-
-        
-        @media (max-width: 767px) {
-          
-            .nav-icon-list {
-                width: 100%;
-            }
-            .nav-icon-list li {
-                width: 100%;
-            }
-            .nav-icon-list a {
-                width: 100%;
-                text-align: center;
-                display: block;
-            }
         }
 
         .site-logo img {
@@ -1350,7 +1552,8 @@
             background: #a67c4e;
             transform: translateY(-2px);
         }
- .materials-premium-section {
+
+        .materials-premium-section {
             padding: 100px 0;
             background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
             position: relative;
@@ -1377,7 +1580,6 @@
             z-index: 2;
         }
         
-        /* Section Header */
         .materials-header {
             text-align: center;
             margin-bottom: 60px;
@@ -1428,7 +1630,6 @@
             letter-spacing: 2px;
         }
         
-        /* Intro Text */
         .materials-intro {
             max-width: 900px;
             margin: 0 auto 60px;
@@ -1459,7 +1660,6 @@
             color: var(--gold);
         }
         
-        /* Materials Block */
         .materials-block {
             margin-bottom: 80px;
         }
@@ -1501,7 +1701,6 @@
             margin-left: 10px;
         }
         
-        /* Materials Grid Layout */
         .materials-grid {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -1513,7 +1712,6 @@
             grid-template-columns: 0.8fr 1.2fr;
         }
         
-        /* Fabric Gallery */
         .fabric-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1573,7 +1771,6 @@
             aspect-ratio: 2 / 1;
         }
         
-        /* Materials List */
         .materials-list-premium {
             list-style: none;
             padding: 0;
@@ -1646,7 +1843,6 @@
             margin-right: 10px;
         }
         
-        /* Structure Gallery */
         .structure-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1695,7 +1891,6 @@
             margin: 0;
         }
         
-        /* Why Materials Stand Out */
         .why-standout {
             background: linear-gradient(135deg, #ffffff 0%, var(--cream) 100%);
             border-radius: 30px;
@@ -1771,7 +1966,6 @@
             margin: 0;
         }
         
-        /* Our Promise */
         .promise-section {
             text-align: center;
             padding: 50px 0;
@@ -1804,23 +1998,6 @@
             margin-bottom: 25px;
         }
         
-        .promise-quote {
-            font-size: 28px;
-            font-weight: 300;
-            color: var(--dark);
-            max-width: 900px;
-            margin: 0 auto 20px;
-            line-height: 1.5;
-            font-style: italic;
-        }
-        
-        .promise-quote i {
-            color: var(--gold);
-            margin: 0 15px;
-            font-size: 24px;
-            opacity: 0.7;
-        }
-        
         .promise-author {
             font-size: 16px;
             color: var(--text-gray);
@@ -1828,7 +2005,6 @@
             letter-spacing: 3px;
         }
         
-        /* Trust Bar */
         .trust-bar {
             background: linear-gradient(135deg, var(--dark) 0%, #1a1a1a 100%);
             border-radius: 60px;
@@ -1855,11 +2031,6 @@
             margin-right: 10px;
         }
         
-        .trust-stats {
-            display: flex;
-            gap: 40px;
-        }
-        
         .trust-stat-item {
             text-align: center;
         }
@@ -1879,7 +2050,6 @@
             margin-top: 5px;
         }
         
-        /* Responsive */
         @media (max-width: 1200px) {
             .materials-grid,
             .materials-grid.reverse {
@@ -1981,77 +2151,79 @@
                 gap: 15px;
             }
         }
-      .hero-slide {
-    position: relative;
-    overflow: hidden;
-}
 
-.hero-slide img {
-    width: 100%;
-    display: block;
-}
+        .hero-slide {
+            position: relative;
+            overflow: hidden;
+        }
 
-/* Logo on top-right of each slide */
-.hero-slide::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 60px;
-    height: 60px;
-    background: url("images/images/logo.png") no-repeat center;
-    background-size: contain;
-    z-index: 10;
-    pointer-events: none;
-}
-.product-image {
-    position: relative;
-    overflow: hidden;
-}
+        .hero-slide img {
+            width: 100%;
+            display: block;
+        }
 
-.product-image img {
-    width: 100%;
-    display: block;
-}
+        .hero-slide::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 60px;
+            height: 60px;
+            background: url("images/images/logo.png") no-repeat center;
+            background-size: contain;
+            z-index: 10;
+            pointer-events: none;
+        }
 
-/* Logo top-right corner */
-.product-image::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    background: url("images/images/logo.png") no-repeat center;
-    background-size: contain;
-    z-index: 10;
-    pointer-events: none;
-}
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-}
+        .product-image {
+            position: relative;
+            overflow: hidden;
+        }
 
-.gallery-item img {
-    width: 100%;
-    display: block;
-}
+        .product-image img {
+            width: 100%;
+            display: block;
+        }
 
-/* Logo top-right on gallery images */
-.gallery-item::after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 45px;
-    height: 45px;
-    background: url("images/images/logo.png") no-repeat center;
-    background-size: contain;
-    z-index: 10;
-    pointer-events: none;
-}.gallery-overlay h5 {
-    color: #fff;
-}
+        .product-image::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background: url("images/images/logo.png") no-repeat center;
+            background-size: contain;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+        }
+
+        .gallery-item::after {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 45px;
+            height: 45px;
+            background: url("images/images/logo.png") no-repeat center;
+            background-size: contain;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .gallery-overlay h5 {
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -2065,11 +2237,8 @@
         </button>
 
         <!-- Top Bar -->
-       
         <div class="top-bar style-default d-flex align-items-center justify-content-center">
-          <div> AnZ Home Furnishings provides premium home decor solutions
-
-            </div>
+            <div> AnZ Decor to Adore Home Furnishings provides premium home decor solutions</div>
         </div>
 
         <!-- .header -->
@@ -2077,43 +2246,20 @@
             <div class="tf-container w-1750">
                 <div class="header-inner">
                     <a href="index.html" class="site-logo">
-<img src="images/images/logo.png " >                  </a>
+                        <img src="images/images/logo.png">
+                    </a>
                     <nav class="main-menu">
                         <ul class="navigation box-nav-menu">
-
-                            <li class="text-menu menu-item">
-                                <a href="index.html" class="item-link">Home</a>
-                            </li>
-                            <li class="text-menu menu-item">
-                                <a href="services.html" class="item-link">Services</a>
-                            </li>
-
-                            <li class="text-menu menu-item">
-                                <a href="product.html" class="item-link">Product</a>
-                            </li>
-
-
-                            <li class="text-menu menu-item">
-                                <a href="gallery.html" class="item-link">Gallery</a>
-                            </li>
-
-                            <li class="text-menu menu-item">
-                                <a href="contact.html" class="item-link">Contact</a>
-                            </li>
-
-
-
-
+                            <li class="text-menu menu-item"><a href="index.html" class="item-link">Home</a></li>
+                            <li class="text-menu menu-item"><a href="services.html" class="item-link">Services</a></li>
+                            <li class="text-menu menu-item"><a href="product.html" class="item-link">Product</a></li>
+                            <li class="text-menu menu-item"><a href="gallery.html" class="item-link">Gallery</a></li>
+                            <li class="text-menu menu-item"><a href="contact.html" class="item-link">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="header-right d-flex align-items-center gap_20">
                         <ul class="nav-icon-list">
-                            <li>
-                                <a href="contact.html"
-                                    class="btn btn-dark text-warning px-5 py-3 fs-5 fw-bold rounded-3 nav-icon-item link">
-                                    Contact Us
-                                </a>
-                            </li>
+                            <li><a href="contact.html" class="btn btn-dark text-warning px-5 py-3 fs-5 fw-bold rounded-3 nav-icon-item link">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -2122,113 +2268,80 @@
 
         <!-- Page Title -->
         <div class="tf-page-title">
-            <h2 class="text-center text-uppercase title">Our Collection</h2>
+            <h2 class="text-center text-uppercase title">Services</h2>
             <ul class="breadcrumb-list">
                 <li><a href="index.html">Home</a></li>
-                <li>Products</li>
+                <li>Services</li>
             </ul>
         </div>
 
         <div class="main-content">
-<div class="product-title-section finished-products">
-    <div class="tf-container">
+            <div class="product-title-section finished-products">
+                <div class="tf-container">
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i> 100+ Projects Completed Successfully
+                    </div>
+                    <h1 class="product-main-title">Our Finished Products</h1>
+                    <p class="product-tagline">Explore our completed furniture & interior works crafted with precision and care.</p>
+                </div>
+            </div>
 
-        <div class="trust-badge">
-            <i class="fas fa-check-circle"></i> 100+ Projects Completed Successfully
-        </div>
-
-        <h1 class="product-main-title">Our Finished Products</h1>
-
-        <p class="product-tagline">
-            Explore our completed furniture & interior works crafted with precision and care.
-        </p>
-
-    </div>
-</div>
             <!-- HERO SLIDER SECTION -->
             <div class="product-hero-section">
-    <div class="tf-container w-1548">
-        <div class="hero-slider-container">
-
-            <div class="swiper hero-main-slider">
-                <div class="swiper-wrapper">
-
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class="hero-slide">
-                            <img src="images/images/product-banner-1.jpg" alt="Luxury Sofas">
-                            <div class="hero-slide-caption">
-                                <span class="badge">Bestseller</span>
-                                <h3>Luxury Custom Sofas</h3>
+                <div class="tf-container w-1548">
+                    <div class="hero-slider-container">
+                        <div class="swiper hero-main-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="hero-slide">
+                                        <img src="images/images/product-banner-1.jpg" alt="Luxury Sofas">
+                                        <div class="hero-slide-caption">
+                                            <span class="badge">Bestseller</span>
+                                            <h3>Luxury Custom Sofas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="hero-slide">
+                                        <img src="images/images/product-banner-3.jpg" alt="Designer Sofas">
+                                        <div class="hero-slide-caption">
+                                            <span class="badge">New Arrival</span>
+                                            <h3>Modern Designer Sofas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="hero-slide">
+                                        <img src="images/images/product-banner-2.jpg" alt="Luxury Bed">
+                                        <div class="hero-slide-caption">
+                                            <span class="badge">Premium</span>
+                                            <h3>Elegant Bedroom Beds</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="hero-slide">
+                                        <img src="images/images/product-banner-4.jpg" alt="Modern Sofas">
+                                        <div class="hero-slide-caption">
+                                            <span class="badge">Custom</span>
+                                            <h3>Stylish Sofa Collection</h3>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class="hero-slide">
-                            <img src="images/images/product-banner-3.jpg" alt="Designer Sofas">
-                            <div class="hero-slide-caption">
-                                <span class="badge">New Arrival</span>
-                                <h3>Modern Designer Sofas</h3>
-                            </div>
-                        </div>
+                    <div class="hero-thumbnails">
+                        <div class="hero-thumb active" data-slide="0"><img src="images/images/product-banner-1.jpg" alt="Sofa 1"></div>
+                        <div class="hero-thumb" data-slide="1"><img src="images/images/product-banner-3.jpg" alt="Sofa 2"></div>
+                        <div class="hero-thumb" data-slide="2"><img src="images/images/product-banner-2.jpg" alt="Bed"></div>
+                        <div class="hero-thumb" data-slide="3"><img src="images/images/product-banner-4.jpg" alt="Sofa 3"></div>
                     </div>
-
-                    <!-- Slide 3 (BED) -->
-                    <div class="swiper-slide">
-                        <div class="hero-slide">
-                            <img src="images/images/product-banner-2.jpg" alt="Luxury Bed">
-                            <div class="hero-slide-caption">
-                                <span class="badge">Premium</span>
-                                <h3>Elegant Bedroom Beds</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide">
-                        <div class="hero-slide">
-                            <img src="images/images/product-banner-4.jpg" alt="Modern Sofas">
-                            <div class="hero-slide-caption">
-                                <span class="badge">Custom</span>
-                                <h3>Stylish Sofa Collection</h3>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
             </div>
-        </div>
-
-        <!-- Thumbnails -->
-        <div class="hero-thumbnails">
-
-            <div class="hero-thumb active" data-slide="0">
-                <img src="images/images/product-banner-1.jpg" alt="Sofa 1">
-            </div>
-
-            <div class="hero-thumb" data-slide="1">
-                <img src="images/images/product-banner-3.jpg" alt="Sofa 2">
-            </div>
-
-            <div class="hero-thumb" data-slide="2">
-                <img src="images/images/product-banner-2.jpg" alt="Bed">
-            </div>
-
-            <div class="hero-thumb" data-slide="3">
-                <img src="images/images/product-banner-4.jpg" alt="Sofa 3">
-            </div>
-
-        </div>
-
-    </div>
-</div>  
 
             <!-- PRODUCT TITLE + TAGLINE -->
             <div class="product-title-section">
@@ -2250,169 +2363,80 @@
 
             <!-- CATEGORY FILTER TABS -->
             <div class="tf-container w-1548">
-    <div class="category-tabs" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center;">
-        <div class="category-tab active" data-category="all" style="padding: 10px 20px; background: #1a1a1a; color: white; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-th-large"></i> All Products</div>
-        <div class="category-tab" data-category="curtains" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-window-maximize"></i> Curtains</div>
-        <div class="category-tab" data-category="blinds" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-blinds"></i> Blinds</div>
-        <div class="category-tab" data-category="sofas" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-couch"></i> Sofas & Furniture</div>
-        <div class="category-tab" data-category="beds" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-bed"></i> Beds & Headboard</div>
-        <div class="category-tab" data-category="flooring" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-border-all"></i> Flooring</div>
-        <div class="category-tab" data-category="wallpapers" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-paint-brush"></i> Wallpapers</div>
-    </div>
-</div>
+                <div class="category-tabs" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center;">
+                    <div class="category-tab active" data-category="all" style="padding: 10px 20px; background: #1a1a1a; color: white; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-th-large"></i> All Products</div>
+                    <div class="category-tab" data-category="curtains" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-window-maximize"></i> Curtains</div>
+                    <div class="category-tab" data-category="blinds" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-blinds"></i> Blinds</div>
+                    <div class="category-tab" data-category="sofas" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-couch"></i> Sofas & Furniture</div>
+                    <div class="category-tab" data-category="beds" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-bed"></i> Beds & Headboard</div>
+                    <div class="category-tab" data-category="flooring" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-border-all"></i> Flooring</div>
+                    <div class="category-tab" data-category="wallpapers" style="padding: 10px 20px; background: #f0f0f0; color: #333; border-radius: 30px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;"><i class="fas fa-paint-brush"></i> Wallpapers</div>
+                </div>
+            </div>
 
-<!-- PRODUCT IMAGE GRID (4 per row) -->
-<div class="tf-container w-1548" style="padding: 0 0 60px;">
-    <div class="product-grid" id="productGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-        
-        <!-- Curtains -->
-        <div class="product-card-elegant" data-category="curtains">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-1.jpg')">
-                <img src="images/images/curtain-1.jpg" alt="Blackout Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="curtains">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-2.jpg')">
-                <img src="images/images/curtain-2.jpg" alt="Sheer Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="curtains">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-3.jpg')">
-                <img src="images/images/curtain-3.jpg" alt="Designer Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="curtains">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-4.jpg')">
-                <img src="images/images/curtain-4.jpg" alt="Printed Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="curtains">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-5.jpg')">
-                <img src="images/images/curtain-5.jpg" alt="Eyelet Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="curtains">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-6.jpg')">
-                <img src="images/images/curtain-6.jpg" alt="Motorized Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-
-        <!-- Blinds -->
-        <div class="product-card-elegant" data-category="blinds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-1.jpg')">
-                <img src="images/images/blind-1.jpg" alt="Roller Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="blinds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-2.JPG')">
-                <img src="images/images/blind-2.JPG" alt="Roman Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="blinds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-3.jpg')">
-                <img src="images/images/blind-3.jpg" alt="Zebra Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="blinds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-4.jpg')">
-                <img src="images/images/blind-4.jpg" alt="Vertical Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="blinds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-5.JPG')">
-                <img src="images/images/blind-5.JPG" alt="Wooden Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="blinds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-3a.jpg')">
-                <img src="images/images/blind-3a.jpg" alt="Motorized Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-
-        <!-- Sofas -->
-        <div class="product-card-elegant" data-category="sofas">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-1.jpg')">
-                <img src="images/images/sofa-1.jpg" alt="Luxury Sofa Set" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="sofas">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-2.jpg')">
-                <img src="images/images/sofa-2.jpg" alt="Elegant 3-Seater" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="sofas">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-4.jpg')">
-                <img src="images/images/sofa-4.jpg" alt="Premium Sectional" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="sofas">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-5.jpg')">
-                <img src="images/images/sofa-5.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="sofas">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-3.jpg')">
-                <img src="images/images/sofa-3.jpg" alt="Luxury Custom Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-
-        <!-- Beds -->
-        <div class="product-card-elegant" data-category="beds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-1.jpg')">
-                <img src="images/images/bed-1.jpg" alt="Royal Storage Bed" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="beds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-2.jpg')">
-                <img src="images/images/bed-2.jpg" alt="King Size Bed Frame" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="beds">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-3.jpg')">
-                <img src="images/images/bed-3.jpg" alt="Designer Upholstered Bed" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-
-        <!-- Flooring -->
-        <div class="product-card-elegant" data-category="flooring">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/flooring-1.jpg')">
-                <img src="images/images/flooring-1.jpg" alt="Vinyl Flooring" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="flooring">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/flooring.jpg')">
-                <img src="images/images/flooring.jpg" alt="Luxury Flooring" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-
-        <!-- Wallpapers -->
-        <div class="product-card-elegant" data-category="wallpapers">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-1.jpg')">
-                <img src="images/images/wallpaper-1.jpg" alt="Floral Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="wallpapers">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-2.jpg')">
-                <img src="images/images/wallpaper-2.jpg" alt="Geometric Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-        <div class="product-card-elegant" data-category="wallpapers">
-            <div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-3.jpg')">
-                <img src="images/images/wallpaper-3.jpg" alt="Textured Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- LIGHTBOX -->
-<div id="lightboxOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 10000; align-items: center; justify-content: center;" onclick="closeLightbox()">
-    <span style="position: absolute; top: 25px; right: 40px; font-size: 45px; color: white; cursor: pointer; z-index: 10001;" onclick="closeLightbox()">&times;</span>
-    <img id="lightboxImage" src="" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.8); object-fit: contain;" alt="lightbox view">
-</div>
+            <!-- PRODUCT IMAGE GRID -->
+            <div class="tf-container w-1548" style="padding: 0 0 60px;">
+                <div class="product-grid" id="productGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-1.jpg')"><img src="images/images/curtain-1.jpg" alt="Blackout Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-2.jpg')"><img src="images/images/curtain-2.jpg" alt="Sheer Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-3.jpg')"><img src="images/images/curtain-3.jpg" alt="Designer Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-4.jpg')"><img src="images/images/curtain-4.jpg" alt="Printed Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-5.jpg')"><img src="images/images/curtain-5.jpg" alt="Eyelet Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-6.jpg')"><img src="images/images/curtain-6.jpg" alt="Motorized Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                                  <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-7.jpg')"><img src="images/images/curtain-7.jpg" alt="Motorized Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>      
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-8.jpg')"><img src="images/images/curtain-8.jpg" alt="Motorized Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                                <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-10.jpg')"><img src="images/images/curtain-10.jpg" alt="Roller Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="curtains"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/curtain-9.jpg')"><img src="images/images/curtain-9.jpg" alt="Curtains" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+   
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-1.jpg')"><img src="images/images/blind-1.jpg" alt="Roller Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-2.jpg')"><img src="images/images/blind-2.jpg" alt="Roman Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-3.jpg')"><img src="images/images/blind-3.jpg" alt="Zebra Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-4.jpg')"><img src="images/images/blind-4.jpg" alt="Vertical Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-5.jpg')"><img src="images/images/blind-5.jpg" alt="Wooden Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/customised-blinds.jpg')"><img src="images/images/customised-blinds.jpg" alt="Motorized Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-8.jpg')"><img src="images/images/blind-8.jpg" alt="Motorized Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="blinds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/blind-3a.jpg')"><img src="images/images/blind-3a.jpg" alt="Motorized Blinds" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+               
 
 
-            <!-- MATERIALS WE USE SECTION -->
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-1.jpg')"><img src="images/images/sofa-1.jpg" alt="Luxury Sofa Set" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-2.jpg')"><img src="images/images/sofa-2.jpg" alt="Elegant 3-Seater" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-4.jpg')"><img src="images/images/sofa-4.jpg" alt="Premium Sectional" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-5.jpg')"><img src="images/images/sofa-5.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-6.jpg')"><img src="images/images/sofa-6.jpg" alt="Luxury Custom Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/20220218_211911.jpg')"><img src="images/images/20220218_211911.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-7.jpg')"><img src="images/images/sofa-7.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-8.jpg')"><img src="images/images/sofa-8.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                                <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-9.jpg')"><img src="images/images/sofa-9.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="sofas"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/sofa-10.jpg')"><img src="images/images/sofa-10.jpg" alt="Designer Fabric Sofa" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+    
+                    <div class="product-card-elegant" data-category="beds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-1.jpg')"><img src="images/images/bed-1.jpg" alt="Royal Storage Bed" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="beds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-2.jpg')"><img src="images/images/bed-2.jpg" alt="King Size Bed Frame" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="beds"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/bed-3.jpg')"><img src="images/images/bed-3.jpg" alt="Designer Upholstered Bed" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="flooring"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/flooring-1.jpg')"><img src="images/images/flooring-1.jpg" alt="Vinyl Flooring" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="flooring"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/flooring.jpg')"><img src="images/images/flooring.jpg" alt="Luxury Flooring" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                   
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-1.jpg')"><img src="images/images/wallpaper-1.jpg" alt="Geometric Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-2.jpg')"><img src="images/images/wallpaper-2.jpg" alt="Geometric Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-3.jpg')"><img src="images/images/wallpaper-3.jpg" alt="Textured Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/customised-wallpaper.jpg')"><img src="images/images/customised-wallpaper.jpg" alt="Floral Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                   
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-4.jpg')"><img src="images/images/wallpaper-4.jpg" alt="Floral Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-5.jpg')"><img src="images/images/wallpaper-5.jpg" alt="Geometric Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-6.jpg')"><img src="images/images/wallpaper-6.jpg" alt="Textured Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+                
+                    <div class="product-card-elegant" data-category="wallpapers"><div class="product-image" style="cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08);" onclick="openLightbox('images/images/wallpaper-7.jpg')"><img src="images/images/wallpaper-7.jpg" alt="Textured Wallpaper" style="width: 100%; height: 280px; object-fit: cover; display: block;"></div></div>
+              
+                </div>
+            </div>
+
+            <!-- LIGHTBOX -->
+            <div id="lightboxOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 10000; align-items: center; justify-content: center;" onclick="closeLightbox()">
+                <span style="position: absolute; top: 25px; right: 40px; font-size: 45px; color: white; cursor: pointer; z-index: 10001;" onclick="closeLightbox()">&times;</span>
+                <img id="lightboxImage" src="" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.8); object-fit: contain;" alt="lightbox view">
+            </div>
+
+            <!-- MATERIALS SECTION -->
             <div class="materials-section">
                 <div class="tf-container w-1462">
                     <div class="section-header">
@@ -2420,18 +2444,12 @@
                         <h2 class="section-title">Materials We <span>Use</span></h2>
                         <p class="section-desc">Crafted with quality. Designed to last.</p>
                     </div>
-                    
                     <div class="materials-intro">
                         <h3>✨ Decor to Adore</h3>
                         <p>At AnZ Home Furnishings, we believe that true luxury begins with the right materials. Since 2014, we have been delivering premium home furnishing solutions with a strong focus on durability, comfort, and refined finishes.</p>
                     </div>
-                    
-                    <!-- Premium Upholstery -->
                     <div class="materials-block">
-                        <div class="materials-block-title">
-                            <i class="fas fa-tshirt"></i>
-                            <span>Premium Fabric Collections</span>
-                        </div>
+                        <div class="materials-block-title"><i class="fas fa-tshirt"></i><span>Premium Fabric Collections</span></div>
                         <div class="materials-showcase">
                             <div class="materials-images">
                                 <div class="material-image-card">
@@ -2450,119 +2468,38 @@
                             </div>
                             <div class="materials-content-text">
                                 <ul class="materials-list-elegant">
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>Premium Fabric Collections</h5>
-                                            <p>Wide selection of high-quality, stain-resistant fabrics</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>Genuine Leather & Leatherette</h5>
-                                            <p>Premium leather options for luxurious feel and durability</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>Designer Curtain Fabrics</h5>
-                                            <p>Exclusive collection of designer fabrics for curtains</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>Custom Color & Texture Options</h5>
-                                            <p>Choose from a wide range to perfectly match your interiors</p>
-                                        </div>
-                                    </li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>Premium Fabric Collections</h5><p>Wide selection of high-quality, stain-resistant fabrics</p></div></li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>Genuine Leather & Leatherette</h5><p>Premium leather options for luxurious feel and durability</p></div></li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>Designer Curtain Fabrics</h5><p>Exclusive collection of designer fabrics for curtains</p></div></li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>Custom Color & Texture Options</h5><p>Choose from a wide range to perfectly match your interiors</p></div></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Strong Inner Structure -->
                     <div class="materials-block">
-                        <div class="materials-block-title">
-                            <i class="fas fa-cubes"></i>
-                            <span>Strong Inner Structure</span>
-                        </div>
+                        <div class="materials-block-title"><i class="fas fa-cubes"></i><span>Strong Inner Structure</span></div>
                         <div class="materials-showcase">
                             <div class="materials-images">
-                                <div class="material-image-card">
-                                    <img src="images/images/wood.webp" alt="Wooden Frame">
-                                    <div class="caption">Premium Wooden Frame</div>
-                                </div>
-                                <div class="material-image-card">
-                                    <img src="images/images/high-density-foam.avif" alt="High Density Foam">
-                                    <div class="caption">High-Density Foam</div>
-                                </div>
+                                <div class="material-image-card"><img src="images/images/wood.webp" alt="Wooden Frame"><div class="caption">Premium Wooden Frame</div></div>
+                                <div class="material-image-card"><img src="images/images/high-density-foam.avif" alt="High Density Foam"><div class="caption">High-Density Foam</div></div>
                             </div>
                             <div class="materials-content-text">
                                 <ul class="materials-list-elegant">
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>High-quality wooden frames</h5>
-                                            <p>Kiln-dried hardwood for superior strength and longevity</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>High-density foam</h5>
-                                            <p>Premium foam that maintains shape and provides lasting comfort</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>Durable internal support structures</h5>
-                                            <p>Engineered for maximum stability and weight distribution</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="material-check"><i class="fas fa-check"></i></span>
-                                        <div class="material-text">
-                                            <h5>Precision craftsmanship in every detail</h5>
-                                            <p>Expert stitching and finishing for flawless results</p>
-                                        </div>
-                                    </li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>High-quality wooden frames</h5><p>Kiln-dried hardwood for superior strength and longevity</p></div></li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>High-density foam</h5><p>Premium foam that maintains shape and provides lasting comfort</p></div></li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>Durable internal support structures</h5><p>Engineered for maximum stability and weight distribution</p></div></li>
+                                    <li><span class="material-check"><i class="fas fa-check"></i></span><div class="material-text"><h5>Precision craftsmanship in every detail</h5><p>Expert stitching and finishing for flawless results</p></div></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Why Materials Stand Out -->
                     <div style="background: linear-gradient(135deg, var(--cream) 0%, #fff 100%); border-radius: 24px; padding: 40px; margin-top: 40px;">
                         <h3 style="font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 30px; text-align: center;">💎 Why Our Materials Stand Out</h3>
                         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px;">
-                            <div style="text-align: center;">
-                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                    <i class="fas fa-gem" style="color: #fff; font-size: 24px;"></i>
-                                </div>
-                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Carefully Sourced Premium Materials</h4>
-                            </div>
-                            <div style="text-align: center;">
-                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                    <i class="fas fa-shield-alt" style="color: #fff; font-size: 24px;"></i>
-                                </div>
-                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Designed for Long-Term Durability</h4>
-                            </div>
-                            <div style="text-align: center;">
-                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                    <i class="fas fa-heart" style="color: #fff; font-size: 24px;"></i>
-                                </div>
-                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Comfort-Focused Construction</h4>
-                            </div>
-                            <div style="text-align: center;">
-                                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                                    <i class="fas fa-sparkles" style="color: #fff; font-size: 24px;"></i>
-                                </div>
-                                <h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Elegant and Modern Finishes</h4>
-                            </div>
+                            <div style="text-align: center;"><div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;"><i class="fas fa-gem" style="color: #fff; font-size: 24px;"></i></div><h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Carefully Sourced Premium Materials</h4></div>
+                            <div style="text-align: center;"><div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;"><i class="fas fa-shield-alt" style="color: #fff; font-size: 24px;"></i></div><h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Designed for Long-Term Durability</h4></div>
+                            <div style="text-align: center;"><div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;"><i class="fas fa-heart" style="color: #fff; font-size: 24px;"></i></div><h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Comfort-Focused Construction</h4></div>
+                            <div style="text-align: center;"><div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;"><i class="fas fa-sparkles" style="color: #fff; font-size: 24px;"></i></div><h4 style="font-size: 16px; font-weight: 700; color: var(--dark);">Elegant and Modern Finishes</h4></div>
                         </div>
                     </div>
                 </div>
@@ -2576,58 +2513,15 @@
                         <h2 class="section-title" style="color: #fff;">Our Simple <span>Process</span></h2>
                         <p class="section-desc" style="color: rgba(255,255,255,0.7);">A seamless journey from concept to completion</p>
                     </div>
-                    
                     <div class="process-timeline">
-                        <div class="process-step-elegant">
-                            <div class="step-circle">
-                                <span class="step-number">1</span>
-                                <i class="step-icon fas fa-comments"></i>
-                            </div>
-                            <h4>Share Requirement</h4>
-                            <p>Tell us your vision, style preferences, and specific needs</p>
-                        </div>
-                        
-                        <div class="process-step-elegant">
-                            <div class="step-circle">
-                                <span class="step-number">2</span>
-                                <i class="step-icon fas fa-store"></i>
-                            </div>
-                            <h4>Visit Showroom</h4>
-                            <p>Explore materials, fabrics, and designs at our Chennai showroom</p>
-                        </div>
-                        
-                        <div class="process-step-elegant">
-                            <div class="step-circle">
-                                <span class="step-number">3</span>
-                                <i class="step-icon fas fa-ruler"></i>
-                            </div>
-                            <h4>Measurement & Quote</h4>
-                            <p>Precise on-site measurements and transparent quotation</p>
-                        </div>
-                        
-                        <div class="process-step-elegant">
-                            <div class="step-circle">
-                                <span class="step-number">4</span>
-                                <i class="step-icon fas fa-tools"></i>
-                            </div>
-                            <h4>Manufacturing</h4>
-                            <p>Expert craftsmanship at our in-house manufacturing unit</p>
-                        </div>
-                        
-                        <div class="process-step-elegant">
-                            <div class="step-circle">
-                                <span class="step-number">5</span>
-                                <i class="step-icon fas fa-truck"></i>
-                            </div>
-                            <h4>Delivery & Installation</h4>
-                            <p>Professional delivery and seamless installation at your location</p>
-                        </div>
+                        <div class="process-step-elegant"><div class="step-circle"><span class="step-number">1</span><i class="step-icon fas fa-comments"></i></div><h4>Share Requirement</h4><p>Tell us your vision, style preferences, and specific needs</p></div>
+                        <div class="process-step-elegant"><div class="step-circle"><span class="step-number">2</span><i class="step-icon fas fa-store"></i></div><h4>Visit Showroom</h4><p>Explore materials, fabrics, and designs at our Chennai showroom</p></div>
+                        <div class="process-step-elegant"><div class="step-circle"><span class="step-number">3</span><i class="step-icon fas fa-ruler"></i></div><h4>Measurement & Quote</h4><p>Precise on-site measurements and transparent quotation</p></div>
+                        <div class="process-step-elegant"><div class="step-circle"><span class="step-number">4</span><i class="step-icon fas fa-tools"></i></div><h4>Manufacturing</h4><p>Expert craftsmanship at our in-house manufacturing unit</p></div>
+                        <div class="process-step-elegant"><div class="step-circle"><span class="step-number">5</span><i class="step-icon fas fa-truck"></i></div><h4>Delivery & Installation</h4><p>Professional delivery and seamless installation at your location</p></div>
                     </div>
                 </div>
             </div>
-
-            <!-- OUR WORK GALLERY -->
-     
 
             <!-- WHY CHOOSE US -->
             <div class="why-choose-section">
@@ -2637,114 +2531,30 @@
                         <h2 class="section-title">Excellence in Every <span>Detail</span></h2>
                         <p class="section-desc">Experience the difference with our premium quality and dedicated service</p>
                     </div>
-                    
                     <div class="why-choose-grid">
-                        <div class="why-choose-card-elegant">
-                            <div class="why-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <h4>Own Manufacturing Unit</h4>
-                            <p>Direct quality control and competitive pricing with in-house production</p>
-                        </div>
-                        
-                        <div class="why-choose-card-elegant">
-                            <div class="why-icon">
-                                <i class="fas fa-medal"></i>
-                            </div>
-                            <h4>Premium Materials</h4>
-                            <p>We source only the finest fabrics, woods, and materials</p>
-                        </div>
-                        
-                        <div class="why-choose-card-elegant">
-                            <div class="why-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <h4>10+ Years Experience</h4>
-                            <p>Decade of expertise in delivering exceptional home furnishing solutions</p>
-                        </div>
-                        
-                        <div class="why-choose-card-elegant">
-                            <div class="why-icon">
-                                <i class="fas fa-clipboard-list"></i>
-                            </div>
-                            <h4>End-to-End Service</h4>
-                            <p>From design consultation to installation — we handle everything</p>
-                        </div>
+                        <div class="why-choose-card-elegant"><div class="why-icon"><i class="fas fa-industry"></i></div><h4>Own Manufacturing Unit</h4><p>Direct quality control and competitive pricing with in-house production</p></div>
+                        <div class="why-choose-card-elegant"><div class="why-icon"><i class="fas fa-medal"></i></div><h4>Premium Materials</h4><p>We source only the finest fabrics, woods, and materials</p></div>
+                        <div class="why-choose-card-elegant"><div class="why-icon"><i class="fas fa-calendar-check"></i></div><h4>10+ Years Experience</h4><p>Decade of expertise in delivering exceptional home furnishing solutions</p></div>
+                        <div class="why-choose-card-elegant"><div class="why-icon"><i class="fas fa-clipboard-list"></i></div><h4>End-to-End Service</h4><p>From design consultation to installation — we handle everything</p></div>
                     </div>
                 </div>
             </div>
 
             <!-- PROMISE SECTION -->
             <div class="promise-section" style="background: #f9f9f9; padding: 60px 0; text-align: center;">
-    <div class="tf-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div class="promise-quote" style="font-size: 18px; color: #555; font-style: italic; margin-bottom: 50px; line-height: 1.8; position: relative; display: inline-block; max-width: 700px;">
-            <i class="fas fa-quote-left" style="color: #c49b6c; font-size: 24px; margin-right: 8px; vertical-align: top;"></i>
-            From material selection to final installation, we ensure every detail reflects quality, comfort, and craftsmanship.
-            <i class="fas fa-quote-right" style="color: #c49b6c; font-size: 24px; margin-left: 8px; vertical-align: bottom;"></i>
-        </div>
-        
-        <div class="trust-stats" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
-            <div class="stat-item" style="text-align: center;">
-                <div class="stat-number" data-target="10" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
-                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Years of Excellence</div>
+                <div class="tf-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <div class="promise-quote" style="font-size: 18px; color: #555; font-style: italic; margin-bottom: 50px; line-height: 1.8; position: relative; display: inline-block; max-width: 700px;">
+                        <i class="fas fa-quote-left" style="color: #c49b6c; font-size: 24px; margin-right: 8px; vertical-align: top;"></i>
+                        From material selection to final installation, we ensure every detail reflects quality, comfort, and craftsmanship.
+                        <i class="fas fa-quote-right" style="color: #c49b6c; font-size: 24px; margin-left: 8px; vertical-align: bottom;"></i>
+                    </div>
+                    <div class="trust-stats" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
+                        <div class="stat-item" style="text-align: center;"><div class="stat-number" data-target="10" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div><div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Years of Excellence</div></div>
+                        <div class="stat-item" style="text-align: center;"><div class="stat-number" data-target="1000" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div><div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Happy Homes Served</div></div>
+                        <div class="stat-item" style="text-align: center;"><div class="stat-number" data-target="100" data-suffix="%" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0%</div><div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Customer Satisfaction</div></div>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item" style="text-align: center;">
-                <div class="stat-number" data-target="1000" data-suffix="+" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0+</div>
-                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Happy Homes Served</div>
-            </div>
-            <div class="stat-item" style="text-align: center;">
-                <div class="stat-number" data-target="100" data-suffix="%" style="font-size: 48px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">0%</div>
-                <div class="stat-label" style="font-size: 16px; color: #777; text-transform: uppercase; letter-spacing: 1px;">Customer Satisfaction</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- COUNTER ANIMATION SCRIPT -->
-<script>
-    function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number');
-        const speed = 50; // Lower = faster animation
-
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const suffix = counter.getAttribute('data-suffix') || '';
-            let count = 0;
-            
-            const increment = target / speed;
-            
-            const updateCount = () => {
-                if (count < target) {
-                    count += increment;
-                    counter.innerText = Math.ceil(count) + suffix;
-                    requestAnimationFrame(updateCount);
-                } else {
-                    counter.innerText = target + suffix;
-                }
-            };
-            
-            updateCount();
-        });
-    }
-
-    // Trigger counter animation when section scrolls into view
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const statsSection = document.querySelector('.trust-stats');
-    if (statsSection) {
-        observer.observe(statsSection);
-    }
-</script>
-
-<!-- Font Awesome (if not already included) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
             <!-- STRONG CTA -->
             <div class="strong-cta-section">
@@ -2753,145 +2563,82 @@
                         <span class="cta-badge-grand">Don't Miss Out</span>
                         <h2>Transform Your <span>Space Today</span></h2>
                         <p>Get expert consultation and premium customization for your dream interiors. Limited slots available this month!</p>
-                        
                         <div class="cta-buttons-grand">
-                            <a href="contact.html" class="btn-cta-grand btn-cta-primary">
-                                <i class="fas fa-calendar-check"></i>
-                                Get Free Consultation
-                            </a>
-                            <a href="https://wa.me/917401130586" class="btn-cta-grand btn-cta-whatsapp" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                WhatsApp Now
-                            </a>
-                            <a href="contact.html#map" class="btn-cta-grand btn-cta-secondary">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Visit Showroom
-                            </a>
+                            <a href="contact.html" class="btn-cta-grand btn-cta-primary"><i class="fas fa-calendar-check"></i>Get Free Consultation</a>
+                            <a href="https://wa.me/917401130586" class="btn-cta-grand btn-cta-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp Now</a>
+                            <a href="contact.html#map" class="btn-cta-grand btn-cta-secondary"><i class="fas fa-map-marker-alt"></i>Visit Showroom</a>
                         </div>
-                        
                         <div style="margin-top: 50px; color: rgba(255,255,255,0.6); font-size: 14px;">
                             <i class="fas fa-phone"></i> +91 74011 30586 &nbsp;&nbsp;|&nbsp;&nbsp;
-                            <i class="fas fa-envelope"></i>                                         <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a>
- &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="fas fa-envelope"></i> <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                             <i class="fas fa-map-marker-alt"></i> 610, M.K.N Road, Alandur, Chennai
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!-- /main-content -->
 
         <!-- Footer -->
-       <footer class="footer">
-    <div class="footer-body">
-        <div class="tf-container">
-            <div class="row">
-
-                <!-- About -->
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="footer-about">
-                        <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
-                        <p class="text-body-default text_white mb_24">
-                            AnZ Home Furnishings provides premium home decor solutions including curtains,
-                            wallpapers, customized sofas, blinds, and flooring to enhance your living space.
-                        </p>
-                        <a href="services.html"
-                            class="hover-underline-link text_white text-body-default text-uppercase">
-                            Learn More
-                        </a>
+        <footer class="footer">
+            <div class="footer-body">
+                <div class="tf-container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="footer-about">
+                                <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
+                                <p class="text-body-default text_white mb_24">An.Z Home Furnishings provides premium home decor solutions including curtains, wallpapers, customized sofas, blinds, and flooring to enhance your living space.</p>
+                                <a href="services.html" class="hover-underline-link text_white text-body-default text-uppercase">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-12">
+                            <div class="wrap-footer-col-block">
+                                <div class="footer-col-block">
+                                    <div class="h5 footer-title text_white mb_24">Products</div>
+                                    <ul class="footer-menu-list d-grid gap_12">
+                                        <li><a href="#" class="link-2 text_white">Curtains</a></li>
+                                        <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
+                                        <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
+                                        <li><a href="#" class="link-2 text_white">Blinds</a></li>
+                                        <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-col-block">
+                                    <div class="h5 footer-title text_white mb_24">More Products</div>
+                                    <ul class="footer-menu-list d-grid gap_12">
+                                        <li><a href="#" class="link-2 text_white">Mattress</a></li>
+                                        <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
+                                        <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
+                                        <li><a href="#" class="link-2 text_white">Carpets</a></li>
+                                        <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="footer-newsletter">
+                                <div class="footer-title text_white mb_28">
+                                    <div class="h5 text-uppercase mb_16 text_white">Contact Us</div>
+                                    <ul class="contact-list">
+                                        <li><i class="fas fa-map-marker-alt"></i><span>610, M.K.N Road, Alandur, Chennai - 600016</span></li>
+                                        <li><i class="fas fa-phone-alt"></i><a href="tel:7401130586">+91 7401130586</a></li>
+                                        <li><i class="fas fa-phone-alt"></i><a href="tel:9710854799">+91 7358560491</a></li>
+                                        <li><i class="fas fa-envelope"></i><a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Products + Links -->
-                <div class="col-lg-5 col-md-6 col-12">
-                    <div class="wrap-footer-col-block">
-
-                        <!-- Products -->
-                        <div class="footer-col-block">
-                            <div class="h5 footer-title text_white mb_24">Products</div>
-                            <ul class="footer-menu-list d-grid gap_12">
-                                <li><a href="#" class="link-2 text_white">Curtains</a></li>
-                                <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
-                                <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
-                                <li><a href="#" class="link-2 text_white">Blinds</a></li>
-                                <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- More Products -->
-                        <div class="footer-col-block">
-                            <div class="h5 footer-title text_white mb_24">More Products</div>
-                            <ul class="footer-menu-list d-grid gap_12">
-                                <li><a href="#" class="link-2 text_white">Mattress</a></li>
-                                <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
-                                <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
-                                <li><a href="#" class="link-2 text_white">Carpets</a></li>
-                                <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
-                            </ul>
-                        </div>
-
+            </div>
+            <div class="footer-bottom">
+                <div class="tf-container">
+                    <div class="wrap-footer-bottom">
+                        <p class="text_white">Copyright © <span id="year"></span> An.Z Home Furnishings. All Rights Reserved. Developed By <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">Chennai Leads</a>.</p>
                     </div>
                 </div>
-
-                <!-- Contact + Newsletter -->
-                <div class="col-lg-4 col-md-6 col-12">
-                   <div class="footer-newsletter">
-
-    <div class="footer-title text_white mb_28">
-        <div class="h5 text-uppercase mb_16 text_white">Contact Us</div>
-
-        <ul class="contact-list">
-            <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>610, M.K.N Road, Alandur, Chennai - 600016</span>
-            </li>
-            <li>
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:7401130586">+91 7401130586</a>
-            </li>
-            <li>
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:9710854799">+91 7358560491</a>
-            </li>
-            <li>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:decoratore@gmail.com">decoratore@gmail.com</a>
-            </li>
-        </ul>
-    </div>
-
-</div>
-                </div>
-
             </div>
-        </div>
+        </footer>
     </div>
-
-    <!-- Bottom -->
-    <div class="footer-bottom">
-        <div class="tf-container">
-            <div class="wrap-footer-bottom">
-
-                <p class="text_white">
-                    Copyright © <span id="year"></span> 
-                    AnZ Home Furnishings. All Rights Reserved. 
-                    Developed By 
-                    <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">
-                        Chennai Leads
-                    </a>.
-                </p>
-
-                <!-- Payments -->
-                
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-    </div>
-    <!-- /wrapper -->
 
     <!-- Toolbar -->
     <div class="tf-toolbar-bottom">
@@ -2905,8 +2652,56 @@
     <!-- Mobile Menu -->
     <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
         <span class="icon-close-popup" data-bs-dismiss="offcanvas"><i class="icon-close"></i></span>
-        <div class="canvas-header"><a href="index.html" class="site-logo"><img src="images/images/logo.png " >    </a></div>
+        <div class="canvas-header"><a href="index.html" class="site-logo"><img src="images/images/logo.png"></a></div>
         <div class="canvas-body"><div class="mb-content-top"><ul class="nav-ul-mb" id="wrapper-menu-navigation"></ul></div></div>
+    </div>
+
+    <!-- ========== STICKY CONTACT ICONS ========== -->
+    <div class="sticky-contact-nav">
+        <a href="https://wa.me/917401130586?text=Hello%20there" target="_blank" rel="noopener noreferrer" class="contact-circle circle-whatsapp" data-tooltip="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917401130586" class="contact-circle circle-call" data-tooltip="Call now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <div class="contact-circle circle-mail" id="openPopupBtn" data-tooltip="Send inquiry">
+            <i class="fas fa-envelope"></i>
+        </div>
+    </div>
+
+    <!-- ========== POPUP FORM ========== -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card">
+            <button class="popup-close-btn" id="closePopupBtn"><i class="fas fa-times"></i></button>
+            <div class="popup-title"><i class="fas fa-paper-plane"></i> Quick Inquiry</div>
+            <form id="inquiryForm">
+                <div class="form-row-custom">
+                    <div class="form-group-custom"><input type="text" class="form-input-custom" placeholder="Full Name *" required></div>
+                    <div class="form-group-custom"><input type="tel" class="form-input-custom" placeholder="Phone Number *" required></div>
+                </div>
+                <div class="form-row-custom">
+                    <div class="form-group-custom"><input type="email" class="form-input-custom" placeholder="Email Address *" required></div>
+                    <div class="form-group-custom">
+                        <select class="form-input-custom" required>
+                            <option value="">Select Product *</option>
+                            <option>Curtains & Drapes</option>
+                            <option>Customized Sofas</option>
+                            <option>Wall Papers</option>
+                            <option>Blinds & Shades</option>
+                            <option>Artificial Grass</option>
+                            <option>Vinyl Flooring</option>
+                            <option>Wooden Flooring</option>
+                            <option>Carpets & Rugs</option>
+                            <option>Mosquito Nets</option>
+                            <option>Mattress Protection</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group-custom"><input type="text" class="form-input-custom" placeholder="Subject (Optional)"></div>
+                <div class="form-group-custom"><textarea class="form-input-custom" placeholder="Your Message / Requirements *" required></textarea></div>
+                <button type="submit" class="submit-btn-custom">Send Message <i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
     </div>
 
     <!-- Javascript -->
@@ -2928,7 +2723,6 @@
             loop: true,
             autoplay: { delay: 4000, disableOnInteraction: false },
             pagination: { el: '.swiper-pagination', clickable: true },
-            // navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
         });
         
         // Thumbnail click
@@ -2962,51 +2756,84 @@
                 });
             });
         });
-    </script>
-    <script>
-    // Lightbox functions
-    function openLightbox(imageSrc) {
-        document.getElementById('lightboxImage').src = imageSrc;
-        document.getElementById('lightboxOverlay').style.display = 'flex';
-    }
-    function closeLightbox() {
-        document.getElementById('lightboxOverlay').style.display = 'none';
-    }
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeLightbox();
-    });
 
-    // Category filter
-    const tabs = document.querySelectorAll('.category-tab');
-    const cards = document.querySelectorAll('.product-card-elegant');
+        // Lightbox functions
+        function openLightbox(imageSrc) {
+            document.getElementById('lightboxImage').src = imageSrc;
+            document.getElementById('lightboxOverlay').style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightboxOverlay').style.display = 'none';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            
-            // Update active tab style
-            tabs.forEach(t => {
-                t.style.background = '#f0f0f0';
-                t.style.color = '#333';
-                t.classList.remove('active');
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 50;
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.getAttribute('data-suffix') || '';
+                let count = 0;
+                const increment = target / speed;
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count) + suffix;
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target + suffix;
+                    }
+                };
+                updateCount();
             });
-            this.style.background = '#1a1a1a';
-            this.style.color = 'white';
-            this.classList.add('active');
-
-            // Filter cards
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
+        }
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
                 }
             });
-        });
-    });
-</script>
+        }, { threshold: 0.5 });
+        const statsSection = document.querySelector('.trust-stats');
+        if (statsSection) observer.observe(statsSection);
 
-<!-- Font Awesome (required for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        // Sticky Popup JS
+        (function() {
+            const overlay = document.getElementById('popupOverlay');
+            const openBtn = document.getElementById('openPopupBtn');
+            const closeBtn = document.getElementById('closePopupBtn');
+            const form = document.getElementById('inquiryForm');
+            if (openBtn) {
+                openBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    overlay.classList.add('active');
+                });
+            }
+            function closePopup() {
+                overlay.classList.remove('active');
+            }
+            if (closeBtn) closeBtn.addEventListener('click', closePopup);
+            if (overlay) {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) closePopup();
+                });
+            }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) closePopup();
+            });
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('📬 Thank you! Your inquiry has been submitted.');
+                    closePopup();
+                    form.reset();
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
