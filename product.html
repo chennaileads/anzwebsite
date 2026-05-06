@@ -2590,30 +2590,30 @@
                                 <a href="services.html" class="hover-underline-link text_white text-body-default text-uppercase">Learn More</a>
                             </div>
                         </div>
-                        <div class="col-lg-5 col-md-6 col-12">
-                            <div class="wrap-footer-col-block">
-                                <div class="footer-col-block">
-                                    <div class="h5 footer-title text_white mb_24">Products</div>
-                                    <ul class="footer-menu-list d-grid gap_12">
-                                        <li><a href="#" class="link-2 text_white">Curtains</a></li>
-                                        <li><a href="#" class="link-2 text_white">Customized Sofas</a></li>
-                                        <li><a href="#" class="link-2 text_white">Wall Papers</a></li>
-                                        <li><a href="#" class="link-2 text_white">Blinds</a></li>
-                                        <li><a href="#" class="link-2 text_white">Artificial Grass</a></li>
-                                    </ul>
-                                </div>
-                                <div class="footer-col-block">
-                                    <div class="h5 footer-title text_white mb_24">More Products</div>
-                                    <ul class="footer-menu-list d-grid gap_12">
-                                        <li><a href="#" class="link-2 text_white">Mattress</a></li>
-                                        <li><a href="#" class="link-2 text_white">Vinyl Flooring</a></li>
-                                        <li><a href="#" class="link-2 text_white">Wooden Flooring</a></li>
-                                        <li><a href="#" class="link-2 text_white">Carpets</a></li>
-                                        <li><a href="#" class="link-2 text_white">Mosquito Nets</a></li>
-                                    </ul>
-                                </div>
+                       <div class="col-lg-5 col-md-6 col-12">
+                        <div class="wrap-footer-col-block">
+                            <div class="footer-col-block">
+                                <div class="h5 footer-title text_white mb_24">Products</div>
+                                <ul class="footer-menu-list d-grid gap_12">
+                                   <li><a href="product.html?category=curtains" class="link-2 text_white footer-product-link">Curtains</a></li>
+        <li><a href="product.html?category=sofas" class="link-2 text_white footer-product-link">Customized Sofas</a></li>
+        <li><a href="product.html?category=wallpapers" class="link-2 text_white footer-product-link">Wall Papers</a></li>
+        <li><a href="product.html?category=blinds" class="link-2 text_white footer-product-link">Blinds</a></li>
+        <li><a href="product.html?category=flooring" class="link-2 text_white footer-product-link">Artificial Grass</a></li>
+      </ul>
+                            </div>
+                            <div class="footer-col-block">
+                                <div class="h5 footer-title text_white mb_24">More Products</div>
+                                <ul class="footer-menu-list d-grid gap_12">
+                                      <li><a href="product.html?category=mattress" class="link-2 text_white">Mattress</a></li>
+        <li><a href="product.html?category=flooring" class="link-2 text_white">Vinyl Flooring</a></li>
+        <li><a href="product.html?category=flooring" class="link-2 text_white">Wooden Flooring</a></li>
+        <li><a href="product.html?category=flooring" class="link-2 text_white">Carpets</a></li>
+        <li><a href="product.html?category=flooring" class="link-2 text_white">Mosquito Nets</a></li>
+    </ul>
                             </div>
                         </div>
+                    </div>
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="footer-newsletter">
                                 <div class="footer-title text_white mb_28">
@@ -2835,5 +2835,103 @@
             }
         })();
     </script>
+    <script>
+    const categoryMapping = {
+        'curtains': 'curtains',
+        'sofas': 'sofas', 
+        'blinds': 'blinds',
+        'wallpapers': 'wallpapers',
+        'flooring': 'flooring',
+        'beds': 'beds',
+        'mattress': 'others',
+        'others': 'others'
+    };
+
+    function activateCategoryFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+        
+        if (category && categoryMapping[category]) {
+            const targetCategory = categoryMapping[category];
+            
+            const tabs = document.querySelectorAll('.category-tab');
+            let targetTab = null;
+            
+            tabs.forEach(tab => {
+                const tabCategory = tab.getAttribute('data-category');
+                if (tabCategory === targetCategory) {
+                    targetTab = tab;
+                }
+            });
+            
+            if (targetTab) {
+                tabs.forEach(t => {
+                    t.classList.remove('active', 'highlight-pulse');
+                    t.style.background = '#f0f0f0';
+                    t.style.color = '#333';
+                });
+                
+                targetTab.classList.add('active', 'highlight-pulse');
+                targetTab.style.background = '#1a1a1a';
+                targetTab.style.color = 'white';
+                
+                const cards = document.querySelectorAll('.product-card-elegant');
+                let delay = 0;
+                
+                cards.forEach((card) => {
+                    card.classList.remove('reveal-animation');
+                    
+                    if (targetCategory === 'all' || card.getAttribute('data-category') === targetCategory) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.classList.add('reveal-animation');
+                        }, delay);
+                        delay += 100;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                setTimeout(() => {
+                    targetTab.classList.remove('highlight-pulse');
+                }, 1500);
+                
+                setTimeout(() => {
+                    const categoryTabs = document.querySelector('.category-tabs');
+                    if (categoryTabs) {
+                        const offset = categoryTabs.getBoundingClientRect().top + window.pageYOffset - 100;
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 200);
+                
+                const productTitle = document.querySelector('.product-main-title');
+                if (productTitle && targetCategory !== 'all') {
+                    const categoryNames = {
+                        'curtains': 'Curtains Collection',
+                        'blinds': 'Blinds Collection', 
+                        'sofas': 'Sofas & Furniture',
+                        'beds': 'Beds & Headboards',
+                        'flooring': 'Flooring Solutions',
+                        'wallpapers': 'Wallpapers Collection',
+                        'others': 'More Products'
+                    };
+                    if (categoryNames[targetCategory]) {
+                        productTitle.textContent = categoryNames[targetCategory];
+                    }
+                }
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(activateCategoryFromURL, 100);
+        window.addEventListener('popstate', function() {
+            activateCategoryFromURL();
+        });
+    });
+</script>
 </body>
 </html>
