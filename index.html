@@ -1109,10 +1109,22 @@
         </div>
 
         <!-- Navigation -->
-        <div class="wrap-sw-button">
-            <div class="sw-button nav-prev-layout"><i class="icon-caret-left"></i></div>
-            <div class="sw-button nav-next-layout"><i class="icon-caret-right"></i></div>
-        </div>
+       <div class="wrap-sw-button" 
+     style="position:absolute; top:50%; left:0; width:100%; transform:translateY(-50%); display:flex; justify-content:space-between; z-index:10; pointer-events:none;">
+
+    <!-- PREV -->
+    <div class="sw-button nav-prev-layout"
+         style="pointer-events:all; width:45px; height:45px; background:#000; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.2); opacity:1; visibility:visible;">
+        <i class="icon-caret-left" style="font-size:16px;"></i>
+    </div>
+
+    <!-- NEXT -->
+    <div class="sw-button nav-next-layout"
+         style="pointer-events:all; width:45px; height:45px; background:#000; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.2); opacity:1; visibility:visible;">
+        <i class="icon-caret-right" style="font-size:16px;"></i>
+    </div>
+
+</div>
     </div>
 </section>
             <!-- /Product Main --><div class="services-wrapper">
