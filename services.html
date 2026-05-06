@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>AnZ Home Furnishings - Premium Home Decor Services</title>
+    <title>An.Z Home Furnishings - Premium Home Decor Services</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -36,28 +36,9 @@
     <link rel="stylesheet" type="text/css" href="icons/icomoon/style.css">
 
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="images/favicon.svg">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.svg">
+ <link rel="shortcut icon" href="images/images/logo.png">
+    <link rel="apple-touch-icon-precomposed" href="images/images/logo.png">
     <style>
-        .tf-page-title,
-.tf-page-title h2,
-.tf-page-title li,
-.tf-page-title a {
-    color: #fff !important;
-} 
-    
-    .tf-page-title {
-    text-align: center;
-}
-
-.breadcrumb-list {
-    display: inline-flex;
-    justify-content: center;
-    padding: 0;
-    margin: 10px auto 0;
-    list-style: none;
-    gap: 8px;
-}
          :root {
             --primary-dark: #0a2c2d;
             --primary-gold: #c19a6b;
@@ -802,25 +783,281 @@
     list-style: none;
     gap: 8px;
 }
-        .tf-page-title,
-.tf-page-title h2,
-.tf-page-title li,
-.tf-page-title a {
-    color: #fff !important;
-} 
-    
-    .tf-page-title {
-    text-align: center;
-}
 
-.breadcrumb-list {
-    display: inline-flex;
-    justify-content: center;
-    padding: 0;
-    margin: 10px auto 0;
-    list-style: none;
-    gap: 8px;
-}
+ <style>
+        /* ========== EXTERNAL CSS FOR STICKY CONTACT & POPUP ========== */
+        .sticky-contact-nav {
+            position: fixed;
+            bottom: 85px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 14px;
+            z-index: 99999;
+        }
+
+        .contact-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .contact-circle i {
+            font-size: 24px;
+            transition: transform 0.2s;
+        }
+
+        .contact-circle:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .circle-whatsapp {
+            background: #25D366;
+        }
+        .circle-call {
+            background: #0b7fb7;
+        }
+        .circle-mail {
+            background: #e87d4b;
+        }
+
+        .contact-circle::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 68px;
+            background: #1e2b3c;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .contact-circle:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-contact-nav {
+                bottom: 90px;
+                right: 14px;
+                gap: 12px;
+            }
+            .contact-circle {
+                width: 48px;
+                height: 48px;
+            }
+            .contact-circle i {
+                font-size: 20px;
+            }
+            .contact-circle::after {
+                display: none;
+            }
+        }
+
+        /* POPUP OVERLAY */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 20, 30, 0.7);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.25s ease;
+            padding: 1rem;
+        }
+
+        .popup-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup-card {
+            background: #ffffff;
+            max-width: 520px;
+            width: 100%;
+            max-height: 85vh;
+            border-radius: 32px;
+            box-shadow: 0 35px 60px rgba(0,0,0,0.35);
+            overflow-y: auto;
+            padding: 2rem 1.8rem 2.2rem;
+            position: relative;
+            transform: scale(0.94);
+            transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e0 #f1f5f9;
+        }
+
+        .popup-overlay.active .popup-card {
+            transform: scale(1);
+        }
+
+        .popup-card::-webkit-scrollbar {
+            width: 6px;
+        }
+        .popup-card::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+        .popup-card::-webkit-scrollbar-thumb {
+            background: #b9c7da;
+            border-radius: 8px;
+        }
+
+        .popup-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: #f0f3f7;
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            color: #2d3a4a;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+
+        .popup-close-btn:hover {
+            background: #e0e7ef;
+            color: #0b1c2e;
+        }
+
+        .popup-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1e2f40;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .popup-title i {
+            color: #e87d4b;
+            font-size: 1.8rem;
+        }
+
+        /* FORM STYLES */
+        .form-row-custom {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .form-group-custom {
+            flex: 1 1 0%;
+            min-width: 140px;
+            margin-bottom: 16px;
+        }
+
+        .form-input-custom {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            background: #f9fbfd;
+            transition: all 0.2s ease;
+            outline: none;
+            color: #1a2b3c;
+            font-weight: 450;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-input-custom:focus {
+            border-color: #e87d4b;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(232,125,75,0.15);
+        }
+
+        select.form-input-custom {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234b5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 1.1rem center;
+            background-size: 18px;
+            padding-right: 2.8rem;
+        }
+
+        textarea.form-input-custom {
+            min-height: 100px;
+        }
+
+        .submit-btn-custom {
+            background: #1e2f40;
+            color: white;
+            border: none;
+            padding: 0.95rem 2.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: background 0.25s, transform 0.15s;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+            width: auto;
+            margin-top: 0.8rem;
+        }
+
+        .submit-btn-custom:hover {
+            background: #152433;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn-custom i {
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .submit-btn-custom:hover i {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 500px) {
+            .popup-card {
+                padding: 1.8rem 1.3rem 2rem;
+            }
+            .form-row-custom {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -1305,7 +1542,7 @@
                     <div class="footer-about">
                         <div class="h5 text-uppercase mb_24 footer-title text_white">About</div>
                         <p class="text-body-default text_white mb_24">
-                            AnZ Home Furnishings provides premium home decor solutions including curtains,
+                            An.Z Home Furnishings provides premium home decor solutions including curtains,
                             wallpapers, customized sofas, blinds, and flooring to enhance your living space.
                         </p>
                         <a href="services.html"
@@ -1387,7 +1624,7 @@
 
                 <p class="text_white">
                     Copyright © <span id="year"></span> 
-                    AnZ Home Furnishings. All Rights Reserved. 
+                    An.Z Home Furnishings. All Rights Reserved. 
                     Developed By 
                     <a href="https://chennaileads.com" target="_blank" rel="noopener noreferrer">
                         Chennai Leads
@@ -1476,12 +1713,52 @@
             
             
     </div>
-    <!-- /Mobile Menu -->
+   <div class="sticky-contact-nav">
+        <a href="https://wa.me/917401130586?text=Hello%20there" target="_blank" rel="noopener noreferrer" class="contact-circle circle-whatsapp" data-tooltip="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+917401130586" class="contact-circle circle-call" data-tooltip="Call now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <div class="contact-circle circle-mail" id="openPopupBtn" data-tooltip="Send inquiry">
+            <i class="fas fa-envelope"></i>
+        </div>
+    </div>
 
-    <!-- Compare -->
-   
-    <!-- /Demo -->
-
+    <!-- ========== POPUP FORM ========== -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-card">
+            <button class="popup-close-btn" id="closePopupBtn"><i class="fas fa-times"></i></button>
+            <div class="popup-title"><i class="fas fa-paper-plane"></i> Quick Inquiry</div>
+            <form id="inquiryForm">
+                <div class="form-row-custom">
+                    <div class="form-group-custom"><input type="text" class="form-input-custom" placeholder="Full Name *" required></div>
+                    <div class="form-group-custom"><input type="tel" class="form-input-custom" placeholder="Phone Number *" required></div>
+                </div>
+                <div class="form-row-custom">
+                    <div class="form-group-custom"><input type="email" class="form-input-custom" placeholder="Email Address *" required></div>
+                    <div class="form-group-custom">
+                        <select class="form-input-custom" required>
+                            <option value="">Select Product *</option>
+                            <option>Curtains & Drapes</option>
+                            <option>Customized Sofas</option>
+                            <option>Wall Papers</option>
+                            <option>Blinds & Shades</option>
+                            <option>Artificial Grass</option>
+                            <option>Vinyl Flooring</option>
+                            <option>Wooden Flooring</option>
+                            <option>Carpets & Rugs</option>
+                            <option>Mosquito Nets</option>
+                            <option>Mattress Protection</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group-custom"><input type="text" class="form-input-custom" placeholder="Subject (Optional)"></div>
+                <div class="form-group-custom"><textarea class="form-input-custom" placeholder="Your Message / Requirements *" required></textarea></div>
+                <button type="submit" class="submit-btn-custom">Send Message <i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
 
     <!-- Javascript -->
     <script src="js/bootstrap.min.js"></script>
